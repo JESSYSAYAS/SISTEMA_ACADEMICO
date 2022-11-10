@@ -107,15 +107,9 @@ include "include/verificar_sesion.php";
                           <input type="number" name="cel" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
+                      
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Año de Ingreso :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="anio_ingreso" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Programa de Estudios :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">nivel_educacion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                         <select name="programa_estudio" id="programa_estudio" class="form-control col-md-7 col-xs-12">
@@ -131,39 +125,9 @@ include "include/verificar_sesion.php";
                         </select>
                         </div>
                       </div>
+                    
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Semestre:
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="semestre" id="semestre" class="form-control col-md-7 col-xs-12">
-                          <option value="">Seleccione</option>
-                          <?php
-                          $buscar_sem = buscarSemestre($conexion);
-                          while ($res_b_sem = mysqli_fetch_array($buscar_sem)) {
-                          ?>
-                          <option value="<?php echo $res_b_sem['id']; ?>"><?php echo $res_b_sem['descripcion']; ?></option>
-                          <?php
-                          };
-                          ?>
-                        </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Seccion :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="seccion" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Turno :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="turno" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Condición :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Condición laboral:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                         <select name="condicion" id="condicion" class="form-control col-md-7 col-xs-12">
@@ -180,14 +144,18 @@ include "include/verificar_sesion.php";
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Discapacidad :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name"> cargo :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select name="discapacidad" id="discapacidad" class="form-control col-md-7 col-xs-12">
-                            <option value="">Seleccione</option>
-                            <option value="SI">SI</option>
-                            <option value="NO">NO</option>
-                          </select>
+                          <select name="id-cargo" id="id-cargo" class="form-control col-md-7 col-xs-12">
+                          <?php
+                          $buscar_cargo = buscarCargo($conexion);
+                          while ($res_b_cargo = mysqli_fetch_array($buscar_cargo)) {
+                          ?>
+                          <option value="<?php echo $res_b_cargo['id']; ?>"><?php echo $res_b_cargo['descripcion']; ?></option>
+                          <?php
+                          };
+                          ?>
                         </div>
                       </div>
                       <div class="ln_solid"></div>

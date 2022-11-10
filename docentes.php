@@ -58,7 +58,12 @@ include "include/verificar_sesion.php";
                           <th>DNI</th>
                           <th>APELLIDOS Y NOMBRES</th>
                           <th>DIRECCION</th>
-                          <th>Acciones</th>
+                          <th>CORREO</th>
+                          <th>FECHA DE NACIMIENTO</th>
+                          <th>GENERO</th>
+                          <th>NIVEL EDUCACION</th>
+                          <th>CONDICION LABORAL</th>
+                          <th>CARGO</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -71,8 +76,12 @@ include "include/verificar_sesion.php";
                           <td><?php echo $res_b_docentes['dni']; ?></td>
                           <td><?php echo $res_b_docentes['apellidos_nombres'];  ?></td>
                           <td><?php echo $res_b_docentes['direccion']; ?></td>
-                          <td><?php echo $res_b_docentes['id_programa_estudios']; ?></td>
-                          <td><?php echo $res_b_docentes['id_semestre']; ?></td>
+                          <td><?php echo $res_b_docentes['correo']; ?></td>
+                          <td><?php echo $res_b_docentes['fecha_nac']; ?></td>
+                          <td><?php echo $res_b_docentes['id_genero']; ?></td>
+                          <td><?php echo $res_b_docentes['nivel_educacion']; ?></td>
+                          <td><?php echo $res_b_docentes['cond_laboral']; ?></td>
+                          <td><?php echo $res_b_docentes['id_cargo']; ?></td>
                           <td>
                             <a href="editar_docentes.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-primary">Editar</a>
                             <a href="operaciones/eliminar_docentes.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-danger">Eliminar</a>
