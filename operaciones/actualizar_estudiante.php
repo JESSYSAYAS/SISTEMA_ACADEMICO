@@ -17,7 +17,10 @@ $turno = $_POST['turno'];
 $condicion = $_POST['condicion'];
 $discapacidad = $_POST['discapacidad'];
 
-$sql = "UPDATE estudiante SET dni='$dni', apellidos_nombres='$nom_ap', id_genero='$id_genero', fecha_nac='$fecha_nac', direccion='$direccion', correo='$email', telefono='$cel', anio_ingreso='$anio_ingreso', id_programa_estudios='$programa_estudio', id_semestre='$semestre', seccion='$seccion', turno='$turno', id_condicion='$condicion', discapacidad='$discapacidad' WHERE id='$id'";
+$sql = "UPDATE estudiante SET dni='$dni', apellidos_nombres='$nom_ap', id_genero='$id_genero',
+ fecha_nac='$fecha_nac', direccion='$direccion', correo='$email', telefono='$cel',
+  anio_ingreso='$anio_ingreso', id_programa_estudios='$programa_estudio', id_semestre='$semestre',
+   seccion='$seccion', turno='$turno', id_condicion='$condicion', discapacidad='$discapacidad' WHERE id='$id'";
 
 $ejec_consulta = mysqli_query($conexion, $sql);
 

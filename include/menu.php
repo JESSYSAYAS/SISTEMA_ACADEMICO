@@ -1,13 +1,17 @@
-        <div class="col-md-3 left_col">
+<div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
               <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
             </div>
 
             <div class="clearfix"></div>
+           <!-- usuarios docentes -->
              <?php
-            $buscar_docente_sesion = buscarDocenteById($conexion, $_SESSION['id_usu_sisacad_iesthuanta']);
-            $res_b_u_s = mysqli_fetch_array($buscar_docente_sesion);
+            $buscar_usu_docente_sesion = buscarUsuarioDocenteById($conexion, $_SESSION['id_usu_sisacad_iesthuanta']);
+            $res_b_u_s = mysqli_fetch_array($buscar_usu_docente_sesion);
+            $id_d_b_S = $res_b_u_s['id_docente'];
+            $buscar_docente_sesion = buscarDocenteById($conexion, $id_d_b_S);
+            $res_b_d_s = mysqli_fetch_array($buscar_docente_sesion);
              ?>
             <!-- menu profile quick info -->
             <div class="profile clearfix">
@@ -15,10 +19,11 @@
                 <img src="Gentella/production/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                <span>Welcome,</span>
-                <h2><?php echo $res_b_u_s['apellidos_nombres']; ?></h2>
+                <span>Bien Venido,</span>
+                <h2><?php echo $res_b_d_s['apellidos_nombres']; ?></h2>
               </div>
             </div>
+          
             <!-- /menu profile quick info -->
 
             <br />
@@ -29,6 +34,8 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
                   <li><a href="index.php"><i class="fa fa-home"></i> Inicio </a>
+
+                  
                     
                   </li>
                   <li><a><i class="fa fa-edit"></i> Datos Institucionales <span class="fa fa-chevron-down"></span></a>
@@ -60,6 +67,7 @@
                   </li>
                   <li><a><i class="fa fa-book"></i> Estudiantes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
+                      
                       <li><a href="estudiantes.php">Estudiante</a></li>
                       <li><a href="usuario_estudiante.php">Usuarios Estudiante</a></li>
                     </ul>
@@ -98,7 +106,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="Gentella/production/images/img.jpg" alt=""><?php echo $res_b_u_s['apellidos_nombres']; ?>
+                    <img src="Gentella/production/images/img.jpg" alt=""><?php echo $res_b_d_s['apellidos_nombres']; ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">

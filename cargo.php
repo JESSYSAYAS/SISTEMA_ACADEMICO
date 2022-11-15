@@ -41,10 +41,10 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Relacion de Docentes</h2>
+                    <h2>Cargo</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="docentes.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="cargos.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -55,26 +55,21 @@ include "include/verificar_sesion.php";
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>DNI</th>
-                          <th>APELLIDOS Y NOMBRES</th>
-                          <th>DIRECCION</th>
+                          <th>DESCRIPCIÓN</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php 
-                        $b_docente = buscardocente($conexion);
-                        while ($res_b_docentes = mysqli_fetch_array($b_docente)) {
+                        $b_cargo = buscarCargo($conexion);
+                        while ($res_b_cargo = mysqli_fetch_array($b_cargo)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_docentes['id']; ?></td>
-                          <td><?php echo $res_b_docentes['dni']; ?></td>
-                          <td><?php echo $res_b_docentes['apellidos_nombres'];  ?></td>
-                          <td><?php echo $res_b_docentes['direccion']; ?></td>
-                          
+                          <td><?php echo $res_b_cargo['id']; ?></td>
+                          <td><?php echo $res_b_cargo['descripcion']; ?></td>
                           <td>
-                            <a href="editar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_docente.php?id=<?php echo $res_b_cargo['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_cargo.php?id=<?php echo $res_b_cargo['descripcion']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php

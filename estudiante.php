@@ -169,7 +169,7 @@ include "include/verificar_sesion.php";
                         <select name="condicion" id="condicion" class="form-control col-md-7 col-xs-12">
                           <option value="">Seleccione</option>
                           <?php
-                          $buscar_condicion = buscarCondicion($conexion);
+                          $buscar_condicion =buscarCondicion($conexion);
                           while ($res_b_condicion = mysqli_fetch_array($buscar_condicion)) {
                           ?>
                           <option value="<?php echo $res_b_condicion['id']; ?>"><?php echo $res_b_condicion['descripcion']; ?></option>
