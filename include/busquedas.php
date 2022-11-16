@@ -59,4 +59,22 @@ function buscardocente($conexion){
     $sql = "SELECT * FROM docente";
     return mysqli_query($conexion, $sql);
 }
-//busqueda de 
+//busqueda UNIDAD DIDACTICA}
+function buscarUnidadDidactica($conexion){
+    $sql = "SELECT * FROM unidad_didactica";
+    return mysqli_query($conexion, $sql);
+}
+function buscarUsuarioUnidadById($conexion, $id){
+    $sql = "SELECT * FROM docente WHERE id=$id";
+    return mysqli_query($conexion, $sql);
+}
+    //busqueda datos institucionales
+
+    function buscarDatosInstByCodModular($conexion, $cod_modular){
+        $sql = "SELECT * FROM datos_institucionales WHERE cod_modular=$cod_modular";
+        return mysqli_query($conexion, $sql);
+    }
+    function mostrarDatosInstitucionales($conexion){
+        $sql = "SELECT * FROM docente";
+        return mysqli_query($conexion, $sql);
+    }
