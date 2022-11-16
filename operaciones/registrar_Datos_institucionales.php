@@ -12,8 +12,6 @@ $telofono = $_POST['telofono'];
 $email = $_POST['correo'];
 $nro_resolucion = $_POST['nro_resolucion'];
 
-
-
 $b_insti = buscarDatosInstByCodModular($conexion, $cod_modular);
 $c_r_b_estudiante = mysqli_num_rows($b_insti);
 if ($c_r_b_estudiante == 0) {//validamos que no haya registros en la base de datos

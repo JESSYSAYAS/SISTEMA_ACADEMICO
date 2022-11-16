@@ -12,7 +12,7 @@ include "include/verificar_sesion.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gentelella Alela! | </title>
-    <!-- Bootstrap -->defghytu
+    <!-- Bootstrap -->
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="Gentella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -40,25 +40,61 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Registros de  Cargos</h2>
+                    <h2>PERIODO ACADEMICO</h2>
                     
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_cargo.php">
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_periodo.php">
+
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Descripcion :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">DNI :
+                           
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="descripcion" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="number" name="dni" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nombre :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="nombre" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha inicio : </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="date" name="fecha_inicio" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha fin : </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="date" name="fecha_fin" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Director :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="director" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha Actas : </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="date" name="fecha_actas" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                           <button class="btn btn-primary" type="button">Cancelar</button>
-						  <button class="btn btn-primary" type="reset">Limpiar</button>
+						              <button class="btn btn-primary" type="reset">Limpiar</button>
                           <button type="submit" class="btn btn-success">Guardar</button>
                         </div>
                       </div>
