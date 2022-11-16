@@ -2,14 +2,12 @@
 include "../include/conexion.php"; //incluir el archivo de la conexion
 include "../include/busquedas.php";
 $id = $_POST['id']; //recibir datos y guardando en una variable $genro
-$nombre = $_POST['nombre']; //recibir datos y guardando en una variable $genero
-$fecha_inicio = $_POST['fecha_inicio'];
-$fecha_fin = $_POST['fecha_fin'];
-$director = $_POST['director'];
-$fechas_actas = $_POST['fecha_actas'];
+$periodo_academico = $_POST['id_periodo_acad']; //recibir datos y guardando en una variable $genero
 
 
-$consulta = "INSERT INTO periodo_academico (id,nombre,fecha_inicio,fecha_fin,director,fecha_actas) VALUES ('$id','$nombre','$fecha_inicio','$fecha_fin','$director','$fechas_actas')";
+
+
+$consulta = "INSERT INTO presente_periodo_acad(id,id_periodo_acad) VALUES ('$id','$periodo_academico')";
 $ejec_consulta = mysqli_query($conexion, $consulta);
 if($ejec_consulta){
     echo "<script>
