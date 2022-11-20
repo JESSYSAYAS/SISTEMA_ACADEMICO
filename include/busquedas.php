@@ -78,7 +78,7 @@ function buscarUnidadDidactica($conexion){
 //busqueda periodo academico
 
 function buscarPeriodoAcadById($conexion){
-    $sql = "SELECT * FROM presente_periodo_acad ";
+    $sql = "SELECT * FROM presente_periodo_acad";
     return mysqli_query($conexion, $sql);
 }
 //busqueda programa de estudios
@@ -86,3 +86,4 @@ function buscarProgramaEstudiosById($conexion){
     $sql = "SELECT * FROM programa_estudios";
     return mysqli_query($conexion, $sql);
 }
+
