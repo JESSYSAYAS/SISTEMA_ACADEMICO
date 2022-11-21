@@ -6,7 +6,7 @@ $genero = $_POST['genero']; //recibir datos y guardando en una variable $genero
 
 
 
-$consulta = "INSERT INTO genero (genero) VALUES ( '$genero')";
+$consulta = "INSERT INTO genero (genero) VALUES ('$genero')";
 $ejec_consulta = mysqli_query($conexion, $consulta);
 if($ejec_consulta){
     echo "<script>

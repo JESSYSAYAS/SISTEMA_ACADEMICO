@@ -61,9 +61,10 @@ include "include/verificar_sesion.php";
                       </thead>
                       <tbody>
                         <?php 
-                        $b_genero = buscargenero($conexion);
-                        while ($res_b_genero = mysqli_fetch_array($b_genero)) {
+                        $buscar_genero = buscargenero($conexion);
+                        while ($res_b_genero = mysqli_fetch_array($buscar_genero)) {
                         ?>
+                        
                         <tr>
                           <td><?php echo $res_b_genero['id']; ?></td>
                           <td><?php echo $res_b_genero['genero']; ?></td>
