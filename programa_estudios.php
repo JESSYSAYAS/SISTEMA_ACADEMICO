@@ -60,24 +60,29 @@ include "include/verificar_sesion.php";
                           <th>nombre</th>
                           <th>resolucion</th>
                           <th>Acciones</th>
-</tr>
+                           </tr>
                       </thead>
                       <tbody>
-                      <?php 
-                      
-                      $buscar_usu_docente_sesion = buscarProgramaEstudiosById($conexion);
-                      $res = mysqli_fetch_array($buscar_usu_docente_sesion); ?>
-                        <tr>
-                          <td><?php echo $res['id']; ?></td>
-                          <td><?php echo $res['codigo']; ?></td>
-                          <td><?php echo $res['tipo'];  ?></td>
-                          <td><?php echo $res['nombre']; ?></td>
-                          <td><?php echo $res['resolucion']; ?></td>
+                     
+                      <?php
+                      $buscar_pe = buscarProgramaEstudio($conexion);
+                      while ($res_b_pe = mysqli_fetch_array($buscar_pe)) {
+                      ?>
+                      <tr>
+                          <td><?php echo $res_b_pe['id']; ?></td>
+                          <td><?php echo $res_b_pe['codigo']; ?></td>
+                          <td><?php echo $res_b_pe['tipo'];  ?></td>
+                          <td><?php echo $res_b_pe['nombre']; ?></td>
+                          <td><?php echo $res_b_pe['resolucion']; ?></td>
                          
                       </td>
+                      <td>
+                            <a href="editar_estudiante.php?id=<?php echo $res_b_periodo['id_periodo_acad']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_periodo['id']; ?>" class="btn btn-danger">Eliminar</a>
+                          </td>
                         </tr>
                         <?php
-                        
+                          };
                         ?>
                         
                       </tbody>
