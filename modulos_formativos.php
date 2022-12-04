@@ -55,14 +55,21 @@ include "include/verificar_sesion.php";
                           <input type="number" name="id" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
-                   
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">NRO MODULAR :
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Descripcion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="number" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="descripcion" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
-                       <div class="form-group">
+                      <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Numero Modular :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="number" name="nro_modulo" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Programa de Estudios :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
