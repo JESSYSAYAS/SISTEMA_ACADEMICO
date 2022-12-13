@@ -1,7 +1,6 @@
 <?php
 include "../include/conexion.php"; //incluir el archivo de la conexion
 include "../include/busquedas.php";
-
 $descripcion = $_POST['descripcion']; //recibir datos y guardando en una variable $usuario
 $codigo = $_POST['codigo']; //recibir datos y guardando en una variable $docente
 

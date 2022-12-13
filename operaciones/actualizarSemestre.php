@@ -5,7 +5,6 @@ include "../include/busquedas.php";
 $id = $_POST['id'];
 $descripcion = $_POST['descripcion'];
 
-
 $sql = "UPDATE semestre SET id='$id', descripcion='$descripcion' WHERE id='$id'";
 
 $ejec_consulta = mysqli_query($conexion, $sql);

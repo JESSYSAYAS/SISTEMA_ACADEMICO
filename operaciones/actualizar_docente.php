@@ -9,15 +9,12 @@ $direccion = $_POST['direccion'];
 $email = $_POST['correo'];
 $cel = $_POST['telefono'];
 $id_genero = $_POST['id_genero'];
-
 $educacion = $_POST['nivel_educacion'];
 $condicion = $_POST['id_condicion'];
 $cargo = $_POST['id_cargo'];
-
 $discapacidad = $_POST['discapacidad'];
 
 $sql = "UPDATE estudiante SET dni='$dni', apellidos_nombres='$nom_ap',fecha_nac='$fecha_nac',direccion='$direccion',correo='$email',telefono='$cel',id_genero='$id_genero',nivel_educacion='$educacion',id_condicion='$condicion',id_cargo='$cargo' WHERE id='$id'";
-
 $ejec_consulta = mysqli_query($conexion, $sql);
 
 if ($ejec_consulta) {

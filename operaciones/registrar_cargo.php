@@ -4,7 +4,6 @@ include "../include/busquedas.php";
 $id = $_POST['id']; //recibir datos y guardando en una variable $docente
 $descripcion = $_POST['descripcion']; //recibir datos y guardando en una variable $usuario
 
-
 $consulta = "INSERT INTO cargo ( descripcion) VALUES ( '$descripcion')";
 $ejec_consulta = mysqli_query($conexion, $consulta);
 if($ejec_consulta){
