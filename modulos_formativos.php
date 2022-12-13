@@ -1,4 +1,3 @@
-
 <?php
 include "include/conexion.php";
 include "include/busquedas.php";
@@ -43,13 +42,12 @@ include "include/verificar_sesion.php";
                   <div class="x_title">
                     <h2>Registro de Modulos Formativos</h2>
                     
-                    <div class="clearfix"></div>
+                  <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
                     <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_modulo.php">
 
-                      
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Descripcion :
                         </label>
@@ -81,8 +79,7 @@ include "include/verificar_sesion.php";
                         </select>
                         </div>
                       </div>
-                     
-                          <br>
+                     <br>
                         </div>
                       </div>
                       <div class="ln_solid"></div>
@@ -93,8 +90,7 @@ include "include/verificar_sesion.php";
                           <button type="submit" class="btn btn-success">Guardar</button>
                         </div>
                       </div>
-
-                    </form>
+                      </form>
                   </div>
                 </div>
               </div>
