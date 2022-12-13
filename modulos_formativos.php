@@ -1,3 +1,4 @@
+
 <?php
 include "include/conexion.php";
 include "include/busquedas.php";
@@ -40,26 +41,26 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Registro de Modulos Formativos</h2>
-                    
-                  <div class="clearfix"></div>
+                    <h2>Registro de modulos profesionales</h2>
+                 
+                    <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
                     <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_modulo.php">
-
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Descripcion :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">descripcion:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="descripcion" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="varchar" name="descripcion" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
+                     
                       <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Numero Modular :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">numero modulo:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="nro_modulo" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="varchar" name="numero_modulo" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
@@ -79,9 +80,9 @@ include "include/verificar_sesion.php";
                         </select>
                         </div>
                       </div>
-                     <br>
-                        </div>
-                      </div>
+                      
+                      
+                    
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
@@ -90,7 +91,7 @@ include "include/verificar_sesion.php";
                           <button type="submit" class="btn btn-success">Guardar</button>
                         </div>
                       </div>
-                      </form>
+                     </form>
                   </div>
                 </div>
               </div>

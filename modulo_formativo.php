@@ -1,4 +1,3 @@
-
 <?php 
 include "include/conexion.php"; 
 include "include/busquedas.php";
@@ -42,7 +41,7 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Modulo Formativo</h2>
+                    <h2>modulos formativos</h2>
                     <ul class="nav navbar-right">
                       <li>
                         <a href="modulos_formativos.php" class="btn btn-success">Agregar Nuevo</a>
@@ -56,25 +55,27 @@ include "include/verificar_sesion.php";
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>Descripcion</th>
-                          <th>Modulo</th>
-                          <th>Programa de Estudios</th>
+                          
+                          <th>descripcion</th>
+                          <th>numero modulo</th>
+                          <th>programa estudios</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php 
-                        $b_modulo = buscarModulo_formativo($conexion);
-                        while ($res_b_modulo = mysqli_fetch_array($b_modulo)) {
+                        $b_estudiantes = buscarGenero($conexion);
+                        while ($res_b_estudiantes = mysqli_fetch_array($b_estudiantes)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_modulo['id']; ?></td>
-                          <td><?php echo $res_b_modulo['descripcion']; ?></td>
-                          <td><?php echo $res_b_modulo['nro_modulo'];  ?></td>
-                          <td><?php echo $res_b_modulo['id_programa_estudio']; ?></td>
-                         <td>
-                            <a href="editar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-danger">Eliminar</a>
+                          <td><?php echo $res_b_estudiantes['id']; ?></td>
+                          <td><?php echo $res_b_estudiantes['descripcion']; ?></td>
+                          <td><?php echo $res_b_estudiantes['nro_modulo']; ?></td>
+                          <td><?php echo $res_b_estudiantes['id_programa_estudio']; ?></td>
+                         
+                          <td>
+                            <a href="editar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
@@ -155,5 +156,4 @@ include "include/verificar_sesion.php";
     } );
     </script>
   </body>
-
 </html>
