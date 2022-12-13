@@ -58,6 +58,7 @@ include "include/verificar_sesion.php";
                           <th>Descripcion</th>
                           <th>programa estudios</th>
                           <th>semestre</th>
+                          <th>modulos</th>
                           <th>creditos</th>
                           <th>horas</th>
                           <th>tipo</th>
@@ -74,6 +75,7 @@ include "include/verificar_sesion.php";
                           <td><?php echo $res_b_unida['id']; ?></td>
                           <td><?php echo $res_b_unida['descripcion']; ?></td>
                           <td><?php echo $res_b_unida['id_programa_estudio'];  ?></td>
+                          <td><?php echo $res_b_unida['id_modulo']; ?></td>
                           <td><?php echo $res_b_unida['id_semestre']; ?></td>
                           <td><?php echo $res_b_unida['creditos']; ?></td>
                           <td><?php echo $res_b_unida['horas']; ?></td>

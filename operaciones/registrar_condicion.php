@@ -2,17 +2,15 @@
 include "../include/conexion.php"; //incluir el archivo de la conexion
 include "../include/busquedas.php";
 
-$codigo= $_POST['codigo']; //recibir datos y guardando en una variable 
-$tipo= $_POST['tipo'];
-$nombre= $_POST['nombre'];
-$resolucion= $_POST['resolucion'];
+$descripcion = $_POST['descripcion']; //recibir datos y guardando en una variable $usuario
+$codigo = $_POST['codigo']; //recibir datos y guardando en una variable $docente
 
-$consulta = "INSERT INTO programa_estudios (codigo,tipo,nombre,resolucion) VALUES ('$codigo','$tipo','$nombre','$resolucion')";
+$consulta = "INSERT INTO cargo ( descripcion,codigo) VALUES ( '$descripcion','$codigo')";
 $ejec_consulta = mysqli_query($conexion, $consulta);
 if($ejec_consulta){
     echo "<script>
         alert('Registro Satisfactorio');
-        window.location = '../unidades_didacticas.php';
+        window.location = '../cargo.php';
     </script>";
 }else{
     echo "<script>

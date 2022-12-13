@@ -56,24 +56,27 @@ include "include/verificar_sesion.php";
                           <input type="text" name="descripcion" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
-                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Programa de Estudios :
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">PERIODO ACADEMICO:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="programa_estudio" id="programa_estudio" class="form-control col-md-7 col-xs-12">
+                        <select name="periodo_academico" id="periodo_academico" class="form-control col-md-7 col-xs-12">
                           <option value="">Seleccione</option>
                           <?php
-                          $buscar_pe = buscarProgramaEstudio($conexion);
+                          $buscar_pe = buscarPeriodoAcadById($conexion);
                           while ($res_b_pe = mysqli_fetch_array($buscar_pe)) {
                           ?>
-                          <option value="<?php echo $res_b_pe['id']; ?>"><?php echo $res_b_pe['nombre']; ?></option>
+                          <option value="<?php echo $res_b_pe['id']; ?>"
+                          <?php if ($res_b_estudiante['id_periodo_academico'] == $res_b_pe['id']) {
+                            echo "selected";
+                          } ?>
+                          ><?php echo $res_b_pe['nombre']; ?></option>
                           <?php
                           };
                           ?>
                         </select>
                         </div>
                       </div>
-
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">MODULO :
                         </label>

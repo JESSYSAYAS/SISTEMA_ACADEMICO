@@ -12,7 +12,7 @@ include "include/verificar_sesion.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gentelella Alela! | </title>
-    <!-- Bootstrap -->
+    <!-- Bootstrap -->defghytu
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="Gentella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -40,90 +40,32 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>programacion de unidades didacticas</h2>
+                    <h2>Registros de  condicion</h2>
                     
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_progra_unid.php">
-
-                      
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_condicion.php">
                       <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">unidades didacticas:
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Descripcion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="varchar" name="id_unidades_didacticas" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="descripcion" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">docente:
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">codigo:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="varchar" name="id_docente" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">periodo academico:
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="varchar" name="id-periodo_acad" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Programa de Estudios :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="programa_estudio" id="programa_estudio" class="form-control col-md-7 col-xs-12">
-                          <option value="">Seleccione</option>
-                          <?php
-                          $buscar_pe = buscarProgramaEstudio($conexion);
-                          while ($res_b_pe = mysqli_fetch_array($buscar_pe)) {
-                          ?>
-                          <option value="<?php echo $res_b_pe['id']; ?>"
-                          <?php if ($res_b_estudiante['id_programa_estudios'] == $res_b_pe['id']) {
-                            echo "selected";
-                          } ?>
-                          ><?php echo $res_b_pe['nombre']; ?></option>
-                          <?php
-                          };
-                          ?>
-                        </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Semestre:
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="semestre" id="semestre" class="form-control col-md-7 col-xs-12">
-                          <option value="">Seleccione</option>
-                          <?php
-                          $buscar_sem = buscarSemestre($conexion);
-                          while ($res_b_sem = mysqli_fetch_array($buscar_sem)) {
-                          ?>
-                          <option value="<?php echo $res_b_sem['id']; ?>"
-                          <?php if ($res_b_estudiante['id_semestre'] == $res_b_sem['id']) {
-                            echo "selected";
-                          } ?>
-                          ><?php echo $res_b_sem['descripcion']; ?></option>
-                          <?php
-                          };
-                          ?>
-                        </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">CALIFICACION:
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="number" name="codigo" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                           <button class="btn btn-primary" type="button">Cancelar</button>
-						              <button class="btn btn-primary" type="reset">Limpiar</button>
+						  <button class="btn btn-primary" type="reset">Limpiar</button>
                           <button type="submit" class="btn btn-success">Guardar</button>
                         </div>
                       </div>

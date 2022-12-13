@@ -1,7 +1,6 @@
 <?php
 include "../include/conexion.php"; //incluir el archivo de la conexion
 include "../include/busquedas.php";
-
 $nombre = $_POST['nombre']; //recibir datos y guardando en una variable 
 $fecha_inicio = $_POST['fecha_inicio'];
 $fecha_fin = $_POST['fecha_fin'];
