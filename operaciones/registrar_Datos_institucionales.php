@@ -1,3 +1,4 @@
+
 <?php
 include "../include/conexion.php";
 include "../include/busquedas.php";
@@ -39,3 +40,4 @@ if ($c_r_b_estudiante == 0) {//validamos que no haya registros en la base de dat
 }
 
 ?>
+

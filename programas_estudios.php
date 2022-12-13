@@ -40,6 +40,7 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
+
                     <h2>Registro de programa estudios</h2>
                     
                 <div class="clearfix"></div>
@@ -67,12 +68,14 @@ include "include/verificar_sesion.php";
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">NOMBRE :
+
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" name="nombre" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
+
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">RESOLUCION :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -80,6 +83,7 @@ include "include/verificar_sesion.php";
                         </div>
                       </div>
                       
+
 
                       <div class="ln_solid"></div>
                       <div class="form-group">

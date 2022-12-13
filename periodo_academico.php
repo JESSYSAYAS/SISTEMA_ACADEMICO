@@ -67,13 +67,13 @@ include "include/verificar_sesion.php";
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha inicio : </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_inicio" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="date" name="fecha_inicio" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha fin : </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_fin" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="date" name="fecha_fin" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
@@ -86,7 +86,7 @@ include "include/verificar_sesion.php";
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha Actas : </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_actas" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="date" name="fecha_actas" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       

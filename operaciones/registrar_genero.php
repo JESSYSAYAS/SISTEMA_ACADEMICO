@@ -1,3 +1,4 @@
+
 <?php
 include "../include/conexion.php"; //incluir el archivo de la conexion
 include "../include/busquedas.php";
@@ -19,5 +20,6 @@ if($ejec_consulta){
         window.history.back();
     </script>";
 }
+
 
 ?>

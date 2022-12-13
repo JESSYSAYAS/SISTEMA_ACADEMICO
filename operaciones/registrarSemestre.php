@@ -1,3 +1,4 @@
+
 <?php
 include "../include/conexion.php";
 include "../include/busquedas.php";
@@ -25,4 +26,5 @@ while ($res_b_sem = mysqli_fetch_array($buscar_sem)) {
 			</script>
 			";
 	}
+
 }

@@ -1,3 +1,4 @@
+
 <?php
 include "../include/conexion.php"; //incluir el archivo de la conexion
 include "../include/busquedas.php";
@@ -23,5 +24,7 @@ while ($res_b_modulo = mysqli_fetch_array($b_modulo)) {
 			window.history.back();
 			</script>";
 	}
+
+
 
  ?>

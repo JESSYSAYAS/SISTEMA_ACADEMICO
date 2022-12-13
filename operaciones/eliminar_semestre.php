@@ -1,3 +1,4 @@
+
 <?php
 include "../include/conexion.php"; 
 $id = $_GET['id'];
@@ -19,5 +20,6 @@ if ($ejecutar) {
 			";
 }
 mysqli_close($conexion);
+
 
 ?>

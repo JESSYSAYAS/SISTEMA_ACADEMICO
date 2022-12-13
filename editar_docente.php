@@ -1,3 +1,4 @@
+
 <?php
 include "include/conexion.php";
 include "include/busquedas.php";
@@ -206,4 +207,5 @@ $res_b_docente = mysqli_fetch_array($busc_docente);
     <!-- Custom Theme Scripts -->
     <script src="Gentella/build/js/custom.min.js"></script>
   </body>
+
 </html>

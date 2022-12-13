@@ -1,3 +1,4 @@
+
 <?php
 include "include/conexion.php";
 include "include/busquedas.php";
@@ -190,4 +191,5 @@ include "include/verificar_sesion.php";
     <!-- Custom Theme Scripts -->
     <script src="Gentella/build/js/custom.min.js"></script>
   </body>
+
 </html>
