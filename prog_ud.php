@@ -1,4 +1,3 @@
-
 <?php 
 include "include/conexion.php"; 
 include "include/busquedas.php";
@@ -42,10 +41,10 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Modulo Formativo</h2>
+                    <h2>programacion de unidades didacticas</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="unidades_didacticas.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="programar_unidades.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -56,13 +55,12 @@ include "include/verificar_sesion.php";
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>Descripcion</th>
-                          <th>programa estudios</th>
+                          <th>unidad didactica</th>
+                          <th>docente</th>
+                          <th>periodo academico</th>
+                          <th>programa de estudios</th>
                           <th>semestre</th>
-                          <th>creditos</th>
-                          <th>horas</th>
-                          <th>tipo</th>
-                          <th>orden</th>
+                          <th>calificacion</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
@@ -73,13 +71,13 @@ include "include/verificar_sesion.php";
                         ?>
                         <tr>
                           <td><?php echo $res_b_unida['id']; ?></td>
-                          <td><?php echo $res_b_unida['descripcion']; ?></td>
-                          <td><?php echo $res_b_unida['id_programa_estudio'];  ?></td>
+                          <td><?php echo $res_b_unida['id_unidad_didactica']; ?></td>
+                          <td><?php echo $res_b_unida['id_docente'];  ?></td>
+                          <td><?php echo $res_b_unida['id_periodo_acad']; ?></td>
+                          <td><?php echo $res_b_unida['id_programa_estudios']; ?></td>
                           <td><?php echo $res_b_unida['id_semestre']; ?></td>
-                          <td><?php echo $res_b_unida['creditos']; ?></td>
-                          <td><?php echo $res_b_unida['horas']; ?></td>
-                          <td><?php echo $res_b_unida['tipo']; ?></td>
-                          <td><?php echo $res_b_unida['orden']; ?></td>
+                          <td><?php echo $res_b_unida['cant_calificacion']; ?></td>
+                         
                           <td>
                             <a href="editar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-primary">Editar</a>
                             <a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-danger">Eliminar</a>
@@ -163,5 +161,4 @@ include "include/verificar_sesion.php";
     } );
     </script>
   </body>
-
 </html>

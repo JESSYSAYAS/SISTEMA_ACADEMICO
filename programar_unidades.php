@@ -1,4 +1,3 @@
-
 <?php
 include "include/conexion.php";
 include "include/busquedas.php";
@@ -41,29 +40,37 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Registro de unidad didactica</h2>
+                    <h2>programacion de unidades didacticas</h2>
                     
-                <div class="clearfix"></div>
+                    <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_unidad.php">
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_progra_unid.php">
 
+                      
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">id :
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">unidades didacticas:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="id" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="varchar" name="id_unidades_didacticas" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">DESCRIPCION :
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">docente:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="descripcion" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="varchar" name="id_docente" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
-                       <div class="form-group">
+                      <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">periodo academico:
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="varchar" name="id-periodo_acad" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Programa de Estudios :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -73,30 +80,15 @@ include "include/verificar_sesion.php";
                           $buscar_pe = buscarProgramaEstudio($conexion);
                           while ($res_b_pe = mysqli_fetch_array($buscar_pe)) {
                           ?>
-                          <option value="<?php echo $res_b_pe['id']; ?>"><?php echo $res_b_pe['nombre']; ?></option>
+                          <option value="<?php echo $res_b_pe['id']; ?>"
+                          <?php if ($res_b_estudiante['id_programa_estudios'] == $res_b_pe['id']) {
+                            echo "selected";
+                          } ?>
+                          ><?php echo $res_b_pe['nombre']; ?></option>
                           <?php
                           };
                           ?>
                         </select>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">MODULO :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="programa_estudio" id="modulo" class="form-control col-md-7 col-xs-12">
-                          <option value="">Seleccione</option>
-                            <?php 
-                        $b_modulo = buscarModulo_formativo($conexion);
-                        while ($res_b_modulo = mysqli_fetch_array($b_modulo)) {
-                        ?>
-                          <option value="<?php echo $res_b_modulo['id']; ?>"><?php echo $res_b_modulo['nro_modulo']; ?></option>
-                          <?php
-                          };
-                          ?>
-                        
-                           </select>
                         </div>
                       </div>
                       <div class="form-group">
@@ -109,7 +101,11 @@ include "include/verificar_sesion.php";
                           $buscar_sem = buscarSemestre($conexion);
                           while ($res_b_sem = mysqli_fetch_array($buscar_sem)) {
                           ?>
-                          <option value="<?php echo $res_b_sem['id']; ?>"><?php echo $res_b_sem['descripcion']; ?></option>
+                          <option value="<?php echo $res_b_sem['id']; ?>"
+                          <?php if ($res_b_estudiante['id_semestre'] == $res_b_sem['id']) {
+                            echo "selected";
+                          } ?>
+                          ><?php echo $res_b_sem['descripcion']; ?></option>
                           <?php
                           };
                           ?>
@@ -117,36 +113,12 @@ include "include/verificar_sesion.php";
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">CREDITOS :
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">CALIFICACION:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="creditos" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="number" name="" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">HORAS :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="horas" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">TIPO :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="tipo" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-
-
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">ORDEN :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="orden" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
@@ -213,5 +185,4 @@ include "include/verificar_sesion.php";
     <!-- Custom Theme Scripts -->
     <script src="Gentella/build/js/custom.min.js"></script>
   </body>
-
 </html>
