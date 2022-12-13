@@ -41,11 +41,10 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>programa estudios</h2>
+                    <h2>programa de estudios</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="programas_estudios.php" class="btn btn-success">Agregar Nuevo</a>
-                      
+                        <a href="program_estudios.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -65,18 +64,18 @@ include "include/verificar_sesion.php";
                       </thead>
                       <tbody>
                         <?php 
-                        $buscar_pe = buscarProgramaEstudio($conexion);
-                        while ($res_b_pe = mysqli_fetch_array($buscar_pe)) {
-                       ?>
+                        $b_estudiantes = buscarGenero($conexion);
+                        while ($res_b_estudiantes = mysqli_fetch_array($b_estudiantes)) {
+                        ?>
                         <tr>
-                          <td><?php echo $res_b_sem['id']; ?></td>
-                          <td><?php echo $res_b_sem['codigo']; ?></td>
-                          <td><?php echo $res_b_sem['tipo']; ?></td>
-                          <td><?php echo $res_b_sem['nombre']; ?></td>
-                          <td><?php echo $res_b_sem['resolucion']; ?></td>
+                          <td><?php echo $res_b_estudiantes['id']; ?></td>
+                          <td><?php echo $res_b_estudiantes['codigo']; ?></td>
+                          <td><?php echo $res_b_estudiantes['tipo']; ?></td>
+                          <td><?php echo $res_b_estudiantes['nombre']; ?></td>
+                          <td><?php echo $res_b_estudiantes['resolucion']; ?></td>
                           <td>
-                            <a href="actualizarSemestre.php?id=<?php echo $res_b_sem['id'];?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_semestre.php?id=<?php echo $res_b_sem['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
@@ -157,5 +156,4 @@ include "include/verificar_sesion.php";
     } );
     </script>
   </body>
-
 </html>
