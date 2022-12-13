@@ -43,7 +43,7 @@
                       <li><a href="dato_institucional.php">Datos Institucionales</a></li>
                       <li><a href="periodo_academico.php">Periodo Académico</a></li>
                       <li><a href="presente_per_academico.php">Presente Periodo Académico</a></li>
-                      <li><a href="programa_estudios.php">Programa de Estudios</a></li>
+                      <li><a href="progra_estudios.php">Programa de Estudios</a></li>
                       <li><a href="modulo_formativo.php">Modulos formativos</a></li>
                       <li><a href="semestre.php">Semestre</a></li>
                       <li><a href="unidad_didactica.php">Unidades didacticas</a></li>
