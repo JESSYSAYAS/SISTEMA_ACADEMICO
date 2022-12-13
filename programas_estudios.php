@@ -1,6 +1,7 @@
 <?php
 include "include/conexion.php";
 include "include/busquedas.php";
+include "include/verificar_sesion.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,16 +58,16 @@ include "include/busquedas.php";
                       </div>
                        
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">TIPO :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">tipo :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="tipo" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="number" name="tipo" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">NOMBRE :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">NOMBRE  :
 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -75,15 +76,13 @@ include "include/busquedas.php";
                       </div>
                       <div class="form-group">
 
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">RESOLUCION :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">resolucion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="resolucion" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="varchar" name="resolucion" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
-                      
-
-
+                     
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
