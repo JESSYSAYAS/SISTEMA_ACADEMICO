@@ -6,9 +6,7 @@ $tipo = $_POST['tipo'];
 $nombre = $_POST['nombre'];
 $resolucion = $_POST['resolucion'];
 
-
-
-$consulta = "INSERT INTO programa_estudios (codigo,tipo,nombre,resolucion) VALUES ('$codigo','$tipo','$nombre','$resolucion')";
+$consulta = "INSERT INTO programa_estudios(codigo,tipo,nombre,resolucion) VALUES ('$codigo','$tipo','$nombre','$resolucion')";
 $ejec_consulta = mysqli_query($conexion, $consulta);
 if($ejec_consulta){
     echo "<script>

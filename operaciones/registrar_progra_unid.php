@@ -1,7 +1,6 @@
 <?php
 include "../include/conexion.php"; //incluir el archivo de la conexion
 include "../include/busquedas.php";
-
 $unidad_didactica = $_POST['unidad_didactica']; //recibir datos y guardando en una variable 
 $id_docente= $_POST['id_docente'];
 $id_periodo_acad= $_POST['id_periodo_acad'];
