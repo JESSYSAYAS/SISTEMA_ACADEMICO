@@ -1,4 +1,3 @@
-
 <?php
 include "include/conexion.php";
 include "include/busquedas.php";
@@ -41,28 +40,23 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Registro de unidad didactica</h2>
+
+                    <h2>Registro de unidades didacticas</h2>
+                    
                 <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_unidad.php">
-
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_pro_estud.php">
+                   
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">id :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">descripcion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="id" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="varchar" name="descripcion" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">DESCRIPCION :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="descripcion" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Programa de Estudios :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -79,22 +73,22 @@ include "include/verificar_sesion.php";
                         </select>
                         </div>
                       </div>
-                        <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">MODULO :
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">modulo formativo :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="programa_estudio" id="modulo" class="form-control col-md-7 col-xs-12">
+                        <select name="programa_estudio" id="programa_estudio" class="form-control col-md-7 col-xs-12">
                           <option value="">Seleccione</option>
-                            <?php 
-                        $b_modulo = buscarModulo_formativo($conexion);
-                        while ($res_b_modulo = mysqli_fetch_array($b_modulo)) {
-                        ?>
-                          <option value="<?php echo $res_b_modulo['id']; ?>"><?php echo $res_b_modulo['nro_modulo']; ?></option>
+                          <?php
+                          $buscar_pe = buscarModulo_formativo($conexion);
+                          while ($res_b_pe = mysqli_fetch_array($buscar_pe)) {
+                          ?>
+                          <option value="<?php echo $res_b_pe['id']; ?>"><?php echo $res_b_pe['nombre']; ?></option>
                           <?php
                           };
                           ?>
-                        
-                           </select>
+                        </select>
                         </div>
                       </div>
                       <div class="form-group">
@@ -114,36 +108,40 @@ include "include/verificar_sesion.php";
                         </select>
                         </div>
                       </div>
+
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">CREDITOS :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">creditos  :
+
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="creditos" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="number" name="creditos" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">HORAS :
+
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">horas:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="horas" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="number" name="horas" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">TIPO :
+
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">tipo:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="tipo" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="varchar" name="tipo" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">orden:
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="number" name="orden" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
-
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">ORDEN :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="orden" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
 
                       <div class="ln_solid"></div>
                       <div class="form-group">
@@ -211,5 +209,5 @@ include "include/verificar_sesion.php";
     <!-- Custom Theme Scripts -->
     <script src="Gentella/build/js/custom.min.js"></script>
   </body>
-
 </html>
+<?
