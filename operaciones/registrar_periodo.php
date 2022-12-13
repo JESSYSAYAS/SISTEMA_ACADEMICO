@@ -13,7 +13,7 @@ $ejec_consulta = mysqli_query($conexion, $consulta);
 if($ejec_consulta){
     echo "<script>
         alert('Registro Satisfactorio');
-        window.location = '../registrar_periodo.php';
+        window.location = '../periodo_academico.php';
     </script>";
 }else{
     echo "<script>
