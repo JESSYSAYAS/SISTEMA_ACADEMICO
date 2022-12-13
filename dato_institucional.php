@@ -2,7 +2,7 @@
 <?php
 include "include/conexion.php";
 include "include/busquedas.php";
-include "include/verificar_sesion.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,8 +70,6 @@ include "include/verificar_sesion.php";
                           <input type="text" name="nombre_institucion" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
-                      
-                      
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Departamento :
                         </label>
