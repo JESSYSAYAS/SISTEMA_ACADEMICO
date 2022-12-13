@@ -42,10 +42,11 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Presente Periodo Academico</h2>
+                    <h2>Semestres</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="periodo_academico.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="semestres.php" class="btn btn-success">Agregar Nuevo</a>
+                      
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -57,17 +58,19 @@ include "include/verificar_sesion.php";
                         <tr>
                           <th>Id</th>
                           <th>periodo academico</th>
-                           <th>Acciones</th>
+                          <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php 
-                       $b_presente_periodo = buscarPeriodoAcadById($conexion);
-                        while ($res_b_periodo = mysqli_fetch_array($b_presente_periodo)) {
+                        
+                        $buscar_sem = buscarPeriodoAcadById($conexion);
+                          while ($res_b_sem = mysqli_fetch_array($buscar_sem)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_periodo['id'];?></td>
-                          <td><?php echo $res_b_periodo['fecha_fin'];?></td>
+                          <td><?php echo $res_b_sem['id']; ?></td>
+                          <td><?php echo $res_b_sem['id_periodo_acad']; ?></td>
+                        
                           <td>
                             <a href="actualizarSemestre.php?id=<?php echo $res_b_sem['id'];?>" class="btn btn-primary">Editar</a>
                             <a href="operaciones/eliminar_semestre.php?id=<?php echo $res_b_sem['id']; ?>" class="btn btn-danger">Eliminar</a>
