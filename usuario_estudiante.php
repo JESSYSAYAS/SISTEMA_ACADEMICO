@@ -59,7 +59,6 @@ include "include/verificar_sesion.php";
                           <th>id_estudiante</th>
                           <th>usuario</th>
                           <th>password</th>
-                         
                         </tr>
                       </thead>
                       <tbody>
@@ -83,9 +82,7 @@ include "include/verificar_sesion.php";
                           </td>
                         </tr>
                         <?php
-                        
                         ?>
-                        
                       </tbody>
                     </table>
                   </div>

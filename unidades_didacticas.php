@@ -42,7 +42,6 @@ include "include/verificar_sesion.php";
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Registro de unidad didactica</h2>
-                    
                 <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -80,8 +79,7 @@ include "include/verificar_sesion.php";
                         </select>
                         </div>
                       </div>
-
-                      <div class="form-group">
+                        <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">MODULO :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
