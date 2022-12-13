@@ -149,3 +149,4 @@ include "include/verificar_sesion.php";
     <script src="Gentella/build/js/custom.min.js"></script>
   </body>
 </html>
+<?
