@@ -67,7 +67,7 @@ include "include/verificar_sesion.php";
                         ?>
                         <tr>
                           <td><?php echo $res_b_periodo['id'];?></td>
-                          <td><?php echo $res_b_periodo['fecha_fin'];?></td>
+                          <td><?php echo $res_b_periodo['fecha_inicio'];?></td>
                           <td>
                             <a href="actualizarSemestre.php?id=<?php echo $res_b_sem['id'];?>" class="btn btn-primary">Editar</a>
                             <a href="operaciones/eliminar_semestre.php?id=<?php echo $res_b_sem['id']; ?>" class="btn btn-danger">Eliminar</a>
