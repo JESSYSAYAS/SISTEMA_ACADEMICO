@@ -3,7 +3,7 @@ include "../include/conexion.php";
 include "../include/busquedas.php";
 $id = $_POST['id'];
 $descripcion = $_POST['descripcion'];
-$por = $_POST['id_programa_estudio'];
+$id_programa_estudio = $_POST['id_programa_estudio'];
 $id_modulo = $_POST['id_modulo'];
 $id_semestre = $_POST['id_semestre'];
 $creditos = $_POST['creditos'];

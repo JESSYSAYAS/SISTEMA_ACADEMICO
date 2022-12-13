@@ -21,7 +21,7 @@ if ($c_r_b_estudiante == 0) {//validamos que no haya registros en la base de dat
 	if ($ejecutar_insetar) {
 		echo "<script>
                 alert('Registro Exitoso');
-                window.location= '../Dato_institucional.php'
+                window.location= '../Datos_institucionales.php'
     			</script>";
 	}else{
 		echo "<script>

@@ -44,7 +44,7 @@ include "include/verificar_sesion.php";
                     <h2>Presente Periodo Academico</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="presente_per_acad.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="periodo_academico.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>

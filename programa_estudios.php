@@ -44,7 +44,8 @@ include "include/verificar_sesion.php";
                     <h2>Programas de Estudios</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="programa_estudios.php" class="btn btn-success">Agregar Nuevo</a>
+                   
+                        <a href="programas_estudios.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>

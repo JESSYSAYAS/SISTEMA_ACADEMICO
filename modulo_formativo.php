@@ -71,8 +71,7 @@ include "include/verificar_sesion.php";
                           <td><?php echo $res_b_modulo['descripcion']; ?></td>
                           <td><?php echo $res_b_modulo['nro_modulo'];  ?></td>
                           <td><?php echo $res_b_modulo['id_programa_estudio']; ?></td>
-                          
-                          <td>
+                         <td>
                             <a href="editar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-primary">Editar</a>
                             <a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
