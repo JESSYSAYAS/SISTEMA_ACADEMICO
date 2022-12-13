@@ -44,7 +44,7 @@ include "include/verificar_sesion.php";
                     <h2>Relacion de usuarios docentes</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="usuarios_docentes.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="docente.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -74,7 +74,10 @@ include "include/verificar_sesion.php";
                           <td><?php echo $res_b_u_s['id_docente']; ?></td>
                           <td><?php echo $res_b_u_s['usuario'];  ?></td>
                           <td><?php echo $res_b_u_s['password']; ?></td>
-                     
+                          <td>
+                            <a href="actualizarSemestre.php?id=<?php echo $res_b_sem['id'];?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_semestre.php?id=<?php echo $res_b_sem['id']; ?>" class="btn btn-danger">Eliminar</a>
+                          </td>
                             
                           </td>
                         </tr>

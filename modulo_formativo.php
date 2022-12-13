@@ -41,10 +41,10 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Genero</h2>
+                    <h2>Modulos Formativos</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="generos.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="modulos_formativos.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -55,26 +55,32 @@ include "include/verificar_sesion.php";
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>GENERO</th>
+                          <th>descripcion</th>
+                          <th>nro_modulo</th>
+                          <th>programa estudios</th>
                           <th>Acciones</th>
-                        </tr>
+                           </tr>
                       </thead>
                       <tbody>
-                      
-                        <?php
-                          $buscar_genero = buscarGenero($conexion);
-                          while ($res_b_genero = mysqli_fetch_array($buscar_genero)) {
-                          ?>
-                        <tr>
-                          <td><?php echo $res_b_genero['id']; ?></td>
-                          <td><?php echo $res_b_genero['genero']; ?></td>
-                          <td>
-                            <a href="editar_genero.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_genero.php?id=<?php echo $res_b_genero['genero']; ?>" class="btn btn-danger">Eliminar</a>
+                     
+                      <?php
+                      $buscar_pe = buscarModulo_formativo($conexion);
+                      while ($res_b_pe = mysqli_fetch_array($buscar_pe)) {
+                      ?>
+                      <tr>
+                          <td><?php echo $res_b_pe['id']; ?></td>
+                          <td><?php echo $res_b_pe['descripcion']; ?></td>
+                          <td><?php echo $res_b_pe['nro_modulo'];  ?></td>
+                          <td><?php echo $res_b_pe['id_programa_estudio']; ?></td>
+                       
+                         </td>
+                      <td>
+                            <a href="editar_estudiante.php?id=<?php echo $res_b_periodo['id_periodo_acad']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_periodo['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
-                        }
+                          };
                         ?>
                         
                       </tbody>

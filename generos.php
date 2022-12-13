@@ -40,56 +40,32 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>PERIODO ACADEMICO</h2>
+                    <h2>Registro de genero</h2>
                     
-                    <div class="clearfix"></div>
+                 <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_periodo.php">
-
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">DNI :
-                           
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="dni" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nombre :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="nombre" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
+                    <br /> 
                     
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha inicio : </label>
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_genero.php"><div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Genero: </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_inicio" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                        <select name="id_genero" id="id_genero" class="form-control col-md-7 col-xs-12">
+                          <option value="">Seleccione</option>
+                          <?php
+                          $buscar_genero = buscarGenero($conexion);
+                          while ($res_b_genero = mysqli_fetch_array($buscar_genero)) {
+                          ?>
+                          <option value="<?php echo $res_b_genero['id']; ?>"><?php echo $res_b_genero['genero']; ?></option>
+                          <?php
+                          };
+                          ?>
+                        </select>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha fin : </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_fin" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                    </select>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Director :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="director" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha Actas : </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_actas" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
@@ -98,8 +74,7 @@ include "include/verificar_sesion.php";
                           <button type="submit" class="btn btn-success">Guardar</button>
                         </div>
                       </div>
-
-                    </form>
+                     </form>
                   </div>
                 </div>
               </div>

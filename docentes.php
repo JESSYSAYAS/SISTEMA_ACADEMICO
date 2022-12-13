@@ -44,7 +44,7 @@ include "include/verificar_sesion.php";
                     <h2>Relacion de Docentes</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="docentes.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="docente.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>

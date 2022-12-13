@@ -40,56 +40,106 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>PERIODO ACADEMICO</h2>
+                    <h2>Registro de unidad didactica</h2>
                     
-                    <div class="clearfix"></div>
+                <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_periodo.php">
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_unidad.php">
+
+                      
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">DESCRIPCION :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="descripcion" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                       <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Programa de Estudios :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <select name="programa_estudio" id="programa_estudio" class="form-control col-md-7 col-xs-12">
+                          <option value="">Seleccione</option>
+                          <?php
+                          $buscar_pe = buscarProgramaEstudio($conexion);
+                          while ($res_b_pe = mysqli_fetch_array($buscar_pe)) {
+                          ?>
+                          <option value="<?php echo $res_b_pe['id']; ?>"><?php echo $res_b_pe['nombre']; ?></option>
+                          <?php
+                          };
+                          ?>
+                        </select>
+                        </div>
+                      </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">DNI :
-                           
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">MODULO :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="dni" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nombre :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="nombre" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha inicio : </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_inicio" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                        <select name="programa_estudio" id="modulo" class="form-control col-md-7 col-xs-12">
+                          <option value="">Seleccione</option>
+                            <?php 
+                        $b_modulo = buscarModulo_formativo($conexion);
+                        while ($res_b_modulo = mysqli_fetch_array($b_modulo)) {
+                        ?>
+                          <option value="<?php echo $res_b_modulo['id']; ?>"><?php echo $res_b_modulo['nro_modulo']; ?></option>
+                          <?php
+                          };
+                          ?>
+                        
+                           </select>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha fin : </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_fin" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Director :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Semestre:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="director" required="required" class="form-control col-md-7 col-xs-12">
+                        <select name="semestre" id="semestre" class="form-control col-md-7 col-xs-12">
+                          <option value="">Seleccione</option>
+                          <?php
+                          $buscar_sem = buscarSemestre($conexion);
+                          while ($res_b_sem = mysqli_fetch_array($buscar_sem)) {
+                          ?>
+                          <option value="<?php echo $res_b_sem['id']; ?>"><?php echo $res_b_sem['descripcion']; ?></option>
+                          <?php
+                          };
+                          ?>
+                        </select>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha Actas : </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">CREDITOS :
+                        </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_actas" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="number" name="creditos" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
-                      
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">HORAS :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="number" name="horas" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">TIPO :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="tipo" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">ORDEN :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="number" name="orden" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">

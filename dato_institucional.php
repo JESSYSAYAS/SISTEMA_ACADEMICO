@@ -52,7 +52,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Codigo Modular :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="cod_modular" maxlength="8" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="number" name="cod_modular" maxlength="10" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
@@ -69,8 +69,6 @@ include "include/verificar_sesion.php";
                           <input type="text" name="nombre_institucion" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
-                      
-                      
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Departamento :
                         </label>
@@ -96,7 +94,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Direccion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="direccion" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="direccion" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
@@ -117,7 +115,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Numero de resolucion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="nro_resolucion" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="varchar" name="nro_resolucion" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                         </select>

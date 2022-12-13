@@ -16,7 +16,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="Gentella/production/images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="./img/logo.png" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Bien Venido,</span>
@@ -106,7 +106,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="Gentella/production/images/img.jpg" alt=""><?php echo $res_b_d_s['apellidos_nombres']; ?>
+                    <img src="./img/logo.png" alt=""><?php echo $res_b_d_s['apellidos_nombres']; ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">

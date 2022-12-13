@@ -123,50 +123,23 @@ $res_b_docente = mysqli_fetch_array($busc_docente);
                           <input type="text" name="nivel_educacion" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_docente['nivel_educacion']; ?>">
                         </div>
                       </div>
-                     
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Cargo :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Semestre:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="cargo" id="cargo" class="form-control col-md-7 col-xs-12">
+                        <select name="semestre" id="semestre" class="form-control col-md-7 col-xs-12">
                           <option value="">Seleccione</option>
                           <?php
-                          $buscar_cargo = buscarCargo($conexion);
-                          while ($res_b_cargo = mysqli_fetch_array($buscar_cargo)) {
+                          $buscar_sem = buscarSemestre($conexion);
+                          while ($res_b_sem = mysqli_fetch_array($buscar_sem)) {
                           ?>
-                          <option value="<?php echo $res_b_cargo['id']; ?>"
-                          <?php if (['id_cargo'] == $res_b_cargo['id']) {
-                            echo "selected";
-                          } ?>
-                          ><?php echo $res_b_cargo['descripcion']; ?></option>
+                          <option value="<?php echo $res_b_sem['id']; ?>"><?php echo $res_b_sem['descripcion']; ?></option>
                           <?php
                           };
                           ?>
                         </select>
                         </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Condición :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="condicion" id="condicion" class="form-control col-md-7 col-xs-12">
-                          <option value="">Seleccione</option>
-                          <?php
-                          $buscar_condicion = buscarCondicion($conexion);
-                          while ($res_b_condicion = mysqli_fetch_array($buscar_condicion)) {
-                          ?>
-                          <option value="<?php echo $res_b_condicion['id']; ?>"
-                          <?php if (['id_condicion'] == $res_b_condicion['id']) {
-                            echo "selected";
-                          } ?>
-                          ><?php echo $res_b_condicion['descripcion']; ?></option>
-                          <?php
-                          };
-                          ?>
-                        </select>
-                        </div>
-                      </div>
-                    
+
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">

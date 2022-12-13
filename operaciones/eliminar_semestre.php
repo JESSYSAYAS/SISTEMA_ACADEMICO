@@ -2,13 +2,13 @@
 include "../include/conexion.php"; 
 $id = $_GET['id'];
 
-$sql = "DELETE FROM docente WHERE id='$id'";
+$sql = "DELETE FROM semestre WHERE id='$id'";
 $ejecutar = mysqli_query($conexion, $sql);
 
 if ($ejecutar) {
     echo "<script>
 					alert('Registro Eliminado');
-					window.location= '../docentes.php';
+					window.location= '../semestre.php';
 				</script>
 			";
 }else{

@@ -41,10 +41,11 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Genero</h2>
+                    <h2>Semestres</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="generos.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="semestres.php" class="btn btn-success">Agregar Nuevo</a>
+                      
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -55,22 +56,23 @@ include "include/verificar_sesion.php";
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>GENERO</th>
+                          <th>Descripcion</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
-                      
-                        <?php
-                          $buscar_genero = buscarGenero($conexion);
-                          while ($res_b_genero = mysqli_fetch_array($buscar_genero)) {
-                          ?>
+                        <?php 
+                        
+                        $buscar_sem = buscarSemestre($conexion);
+                          while ($res_b_sem = mysqli_fetch_array($buscar_sem)) {
+                        ?>
                         <tr>
-                          <td><?php echo $res_b_genero['id']; ?></td>
-                          <td><?php echo $res_b_genero['genero']; ?></td>
+                          <td><?php echo $res_b_sem['id']; ?></td>
+                          <td><?php echo $res_b_sem['descripcion']; ?></td>
+                        
                           <td>
-                            <a href="editar_genero.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_genero.php?id=<?php echo $res_b_genero['genero']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="actualizarSemestre.php?id=<?php echo $res_b_sem['id'];?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_semestre.php?id=<?php echo $res_b_sem['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php

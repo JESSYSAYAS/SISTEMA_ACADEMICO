@@ -41,10 +41,10 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Genero</h2>
+                    <h2>Modulo Formativo</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="generos.php" class="btn btn-success">Agregar Nuevo</a>
+                        <a href="unidades_didacticas.php" class="btn btn-success">Agregar Nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -55,22 +55,33 @@ include "include/verificar_sesion.php";
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>GENERO</th>
+                          <th>Descripcion</th>
+                          <th>programa estudios</th>
+                          <th>semestre</th>
+                          <th>creditos</th>
+                          <th>horas</th>
+                          <th>tipo</th>
+                          <th>orden</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
-                      
-                        <?php
-                          $buscar_genero = buscarGenero($conexion);
-                          while ($res_b_genero = mysqli_fetch_array($buscar_genero)) {
-                          ?>
+                        <?php 
+                        $b_unidad = buscarUnidadDidactica($conexion);
+                        while ($res_b_unidad = mysqli_fetch_array($b_unidad)) {
+                        ?>
                         <tr>
-                          <td><?php echo $res_b_genero['id']; ?></td>
-                          <td><?php echo $res_b_genero['genero']; ?></td>
+                          <td><?php echo $res_b_unida['id']; ?></td>
+                          <td><?php echo $res_b_unida['descripcion']; ?></td>
+                          <td><?php echo $res_b_unida['id_programa_estudio'];  ?></td>
+                          <td><?php echo $res_b_unida['id_semestre']; ?></td>
+                          <td><?php echo $res_b_unida['creditos']; ?></td>
+                          <td><?php echo $res_b_unida['horas']; ?></td>
+                          <td><?php echo $res_b_unida['tipo']; ?></td>
+                          <td><?php echo $res_b_unida['orden']; ?></td>
                           <td>
-                            <a href="editar_genero.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_genero.php?id=<?php echo $res_b_genero['genero']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php

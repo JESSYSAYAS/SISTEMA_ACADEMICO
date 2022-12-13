@@ -75,9 +75,15 @@ function buscarUnidadDidactica($conexion){
         $sql = "SELECT * FROM datos_institucionales";
         return mysqli_query($conexion, $sql);
     }
-//busqueda datos institucionales
+//busqueda periodo academico
 
 function buscarPeriodoAcadById($conexion){
-    $sql = "SELECT * FROM presente_periodo_acad ";
+    $sql = "SELECT * FROM periodo_academico";
+    return mysqli_query($conexion, $sql);
+}
+//busqueda modulo formartivo
+
+function buscarModulo_formativo($conexion){
+    $sql = "SELECT * FROM modulo_profesional";
     return mysqli_query($conexion, $sql);
 }
