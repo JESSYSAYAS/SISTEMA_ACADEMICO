@@ -40,6 +40,7 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
+<<<<<<< HEAD
                     <h2>Registro de programa de estudios</h2>
                     
                     <div class="clearfix"></div>
@@ -65,12 +66,42 @@ include "include/verificar_sesion.php";
                       </div>
                       <div class="form-group">
                       <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">nombre:
+=======
+                    <h2>Registro de programa estudios</h2>
+                    
+                <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_pro_estud.php">
+                   
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">codigo :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="varchar" name="codigo" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                       
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">TIPO :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="tipo" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">NOMBRE :
+>>>>>>> 5ae20d2ccb02bae06adc3175720d58cd70865491
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" name="nombre" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
+<<<<<<< HEAD
                       <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">resolucion:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -81,6 +112,16 @@ include "include/verificar_sesion.php";
                       <br>
                         </div>
                       </div>
+=======
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">RESOLUCION :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="resolucion" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      
+
+>>>>>>> 5ae20d2ccb02bae06adc3175720d58cd70865491
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
