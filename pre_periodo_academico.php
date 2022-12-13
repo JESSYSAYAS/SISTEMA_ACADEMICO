@@ -59,7 +59,7 @@ include "include/verificar_sesion.php";
                           $buscar_pe = buscarPeriodoAcadById($conexion);
                           while ($res_b_pe = mysqli_fetch_array($buscar_pe)) {
                           ?>
-                          <option value="<?php echo $res_b_pe['id']; ?>"><?php echo $res_b_pe['id_periodo_acad']; ?></option>
+                          <option value="<?php echo $res_b_pe['id']; ?>"><?php echo $res_b_pe['nombre']; ?></option>
                           <?php
                           };
                           ?>
