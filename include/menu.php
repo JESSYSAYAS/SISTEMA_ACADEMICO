@@ -46,7 +46,7 @@
                       <li><a href="programa_estudios.php">Programa de Estudios</a></li>
                       <li><a href="modulo_formativo.php">Modulos formativos</a></li>
                       <li><a href="semestre.php">Semestre</a></li>
-                      <li><a href="unidad_didactica.php">Unidades didacticas</a></li>
+                      <li><a href="uni_didactica.php">Unidades didacticas</a></li>
                       <li><a href="cargo.php">Cargo</a></li>
                       <li><a href="genero.php">Género</a></li>
                     </ul>
