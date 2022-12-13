@@ -63,10 +63,9 @@ include "include/verificar_sesion.php";
                       </thead>
                       <tbody>
                         <?php 
-                        
-                        $buscar_sem = buscarPeriodoAcadById($conexion);
-                          while ($res_b_sem = mysqli_fetch_array($buscar_sem)) {
-                        ?>
+                        $buscar_pe = buscarPeriodoAcadById($conexion);
+                        while ($res_b_pe = mysqli_fetch_array($buscar_pe)) {
+                       ?>
                         <tr>
                           <td><?php echo $res_b_sem['id']; ?></td>
                           <td><?php echo $res_b_sem['id_periodo_acad']; ?></td>
