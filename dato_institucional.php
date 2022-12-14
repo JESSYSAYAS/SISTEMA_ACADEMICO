@@ -41,7 +41,7 @@ include "include/verificar_sesion.php";
                 <div class="x_panel">
                   <div class="x_title">
 
-                    <h2>Registro de dato institucional</h2>
+                    <h2> <font color="blue" face="Comic Sans MS,arial">Registro de dato institucional</font></h2>
                     
                 <div class="clearfix"></div>
                   </div>
