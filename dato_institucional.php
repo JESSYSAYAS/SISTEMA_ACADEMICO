@@ -41,11 +41,11 @@ include "include/verificar_sesion.php";
                 <div class="x_panel">
                   <div class="x_title">
 
-                    <h2> <font color="blue" face="font-italic">Registro de dato institucional</font></h2>
+                    <h2> <font color="blue" face="Star Wars">Registro de dato institucional</font></h2>
                     
                 <div class="clearfix"></div>
                   </div>
-                  <div class="x_content"><font color="blue" face="font-italic">
+                  <div class="x_content"><font color="blue" face="Star Wars">
                     <br />
                     <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_Datos-institucionales.php">
                    
