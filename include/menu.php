@@ -69,7 +69,7 @@
                     <ul class="nav child_menu">
                       
                       <li><a href="estudiantes.php">Estudiante</a></li>
-                      <li><a href="usuario_estudiante.php">Usuarios Estudiante</a></li>
+                      <li><a href="usuarios_estudiantes.php">Usuarios Estudiante</a></li>
                     </ul>
                   </li>
                 </ul>
