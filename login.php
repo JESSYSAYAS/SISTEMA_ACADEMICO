@@ -31,12 +31,15 @@
         
         <div class="animate form login_form">
           <section class="login_content">
+             
             <img src="./img/logo.png" alt="..." class="img-circle profile_img">
             <form method="POST" action="operaciones/iniciar_sesion.php">
             
               <h1><font color="blue" face="Comic Sans MS,arial">Inicio de Sesión</font></h1>
               <div>
+              <font color="blue" face="Comic Sans MS,arial">
                 <input type="text" name="usuario" class="form-control" placeholder="Usuario" required="" />
+                </font> 
               </div> 
               <div>
                 <input type="password" name="password" class="form-control" placeholder="Contraseña" required="" />
@@ -48,16 +51,16 @@
 
               <div class="clearfix"></div>
 
-              <div class="separator">
-                <p class="change_link" font color="blue" face="Comic Sans MS,arial">Nuevo en el sitio?
-                  <a href="crear_usuario.php" class="to_register" font color="blue" face="Comic Sans MS,arial"> Crear Cuenta </a>
+              <div class="separator" >
+                <p class="change_link">Nuevo en el sitio?
+                  <a href="crear_usuario.php" class="to_register"> Crear Cuenta </a>
                 </p>
 
                 <div class="clearfix"></div>
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i><font color="blue" face="Comic Sans MS,arial">Sistema Academico</font></h1>
+                  <h1><i class="fa fa-paw"></i><font color="blue" >Sistema Academico</font> </h1>
                   
                 </div>
               </div>
