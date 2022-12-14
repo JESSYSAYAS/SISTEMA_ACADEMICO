@@ -58,7 +58,6 @@ include "include/verificar_sesion.php";
                     
                           <th>id_periodo_acad</th>
                           <th>id_programa_estudio</th>
-                          
                           <th>id_semestre</th>
                           <th>id_programacion_ud</th>
                           <th>id_estudiante</th>
