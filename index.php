@@ -35,7 +35,11 @@ include "include/busquedas.php";
       <div class="main_container">
         <?php include "include/menu.php" ?>  
         <!-- Menu en la parte superior -->
-        <!-- page content -->
+        <!-- page content --> 
+         <div>
+        <img src="./img/esta.jpg" alt="..." class="img-circle profile_img">
+        </div>
+
         <div class="right_col" role="main">
           <div class="row">
             <div class="col-md-8 col-sm-8 col-xs-12">
@@ -45,10 +49,7 @@ include "include/busquedas.php";
             </div>
           </div>
         </div>
-        <div>
-        <img src="./img/esta.jpg" alt="..." class="img-circle profile_img">
-        </div>
-
+      
 
         <!-- /page content -->
         <!-- footer content -->
