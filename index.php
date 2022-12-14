@@ -40,13 +40,12 @@ include "include/busquedas.php";
 
         <div class="right_col" role="main">
           <div class="row">
-            <div>
-        <img src="./img/esta.jpg" alt="..." class="img-circle profile_img">
-        </div>
-            <div class="col-md-8 col-sm-8 col-xs-12">
+          <div>
+           <img src="./img/esta.jpg" alt="..." class="img profile_img">
+          </div>
+        <div class="col-md-8 col-sm-8 col-xs-12">
 
-            
-              <?php echo $_SESSION['id_usu_sisacad_iesthuanta']; ?>
+            <?php echo $_SESSION['id_usu_sisacad_iesthuanta']; ?>
             </div>
           </div>
         </div>
