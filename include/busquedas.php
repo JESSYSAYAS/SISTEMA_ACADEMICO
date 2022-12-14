@@ -92,7 +92,7 @@ function buscarModulo_formativo($conexion){
     $sql = "SELECT * FROM modulo_profesional";
     return mysqli_query($conexion, $sql);
 }
-//busqueda modulo formartivo
+//busqueda programacion unidad didactica
 
 function buscarprogramacion_unidad_didactica($conexion){
     $sql = "SELECT * FROM programacion_unidad_didactica";

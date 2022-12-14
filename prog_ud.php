@@ -66,7 +66,7 @@ include "include/verificar_sesion.php";
                       </thead>
                       <tbody>
                         <?php 
-                        $b_unidad = buscarUnidadDidactica($conexion);
+                        $b_unidad = buscarprogramacion_unidad_didactica($conexion);
                         while ($res_b_unidad = mysqli_fetch_array($b_unidad)) {
                         ?>
                         <tr>
@@ -79,8 +79,8 @@ include "include/verificar_sesion.php";
                           <td><?php echo $res_b_unida['cant_calificacion']; ?></td>
                          
                           <td>
-                            <a href="editar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_docente.php?id=<?php echo $res_b_unidad['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_unidad['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
