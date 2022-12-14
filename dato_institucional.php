@@ -45,7 +45,8 @@ include "include/verificar_sesion.php";
                     
                 <div class="clearfix"></div>
                   </div>
-                  <div class="x_content"><font color="purple" face="Star Wars" >
+                  <div class="x_content">
+                    <font color="purple" face="Star Wars" >
                     <br />
                     <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_Datos-institucionales.php">
                    

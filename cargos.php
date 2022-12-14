@@ -40,11 +40,12 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Registros de  Cargos</h2>
+                    <h2><font color="purple" size="30px" face="Star Wars">Registros de  Cargos</font></h2>
                     
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
+                  <font color="purple" face="Star Wars">
                     <br />
                     <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_cargo.php">
                       <div class="form-group">
@@ -64,6 +65,7 @@ include "include/verificar_sesion.php";
                       </div>
 
                     </form>
+                    </font>
                   </div>
                 </div>
               </div>

@@ -41,7 +41,7 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>programa de estudios</h2>
+                    <h2><font color="purple" size="30px" face="Star Wars">programa de estudios </font></h2>
                     <ul class="nav navbar-right">
                       <li>
                         <a href="program_estudios.php" class="btn btn-success">Agregar Nuevo</a>
@@ -50,7 +50,7 @@ include "include/verificar_sesion.php";
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    
+                  <font color="purple" face="Star Wars" >
                     <table id="example" class="table table-striped table-bordered">
                       <thead>
                         <tr>
@@ -81,7 +81,7 @@ include "include/verificar_sesion.php";
                         <?php
                         }
                         ?>
-                        
+                        </font>
                       </tbody>
                     </table>
                   </div>
