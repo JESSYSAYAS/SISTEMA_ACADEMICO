@@ -17,7 +17,7 @@ if($ejec_consulta){
     </script>";
 }else{
     echo "<script>
-        alert('Error al registrar usuario');
+        alert('Error al registrar ');
         window.history.back();
     </script>";
 }
