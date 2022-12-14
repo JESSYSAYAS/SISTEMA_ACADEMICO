@@ -72,17 +72,17 @@ include "include/verificar_sesion.php";
                         while ($res_b_unidad = mysqli_fetch_array($b_unidad)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_unida['id']; ?></td>
-                          <td><?php echo $res_b_unida['descripcion']; ?></td>
-                          <td><?php echo $res_b_unida['id_programa_estudio'];  ?></td>
-                          <td><?php echo $res_b_unida['id_semestre']; ?></td>
-                          <td><?php echo $res_b_unida['creditos']; ?></td>
-                          <td><?php echo $res_b_unida['horas']; ?></td>
-                          <td><?php echo $res_b_unida['tipo']; ?></td>
-                          <td><?php echo $res_b_unida['orden']; ?></td>
+                          <td><?php echo $res_b_unidad['id']; ?></td>
+                          <td><?php echo $res_b_unidad['descripcion']; ?></td>
+                          <td><?php echo $res_b_unidad['id_programa_estudio'];  ?></td>
+                          <td><?php echo $res_b_unidad['id_semestre']; ?></td>
+                          <td><?php echo $res_b_unidad['creditos']; ?></td>
+                          <td><?php echo $res_b_unidad['horas']; ?></td>
+                          <td><?php echo $res_b_unidad['tipo']; ?></td>
+                          <td><?php echo $res_b_unidad['orden']; ?></td>
                           <td>
-                            <a href="editar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_docente.php?id=<?php echo $res_b_unidad['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_unidad['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
