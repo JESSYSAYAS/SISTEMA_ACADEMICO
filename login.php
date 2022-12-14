@@ -26,11 +26,12 @@
     <div>
       <a class="hiddenanchor" id="signup"></a>
       <a class="hiddenanchor" id="signin"></a>
-
-      <div class="login_wrapper">
-            
+<div class="profile_pic">
                 <img src="./img/logo.png" alt="..." class="img-circle profile_img">
               </div>
+      <div class="login_wrapper">
+             <div class="profile clearfix">
+              
         <div class="animate form login_form">
            
            
