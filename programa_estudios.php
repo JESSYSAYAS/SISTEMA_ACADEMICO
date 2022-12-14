@@ -64,18 +64,18 @@ include "include/verificar_sesion.php";
                       </thead>
                       <tbody>
                         <?php 
-                        $b_estudiantes = buscarGenero($conexion);
-                        while ($res_b_estudiantes = mysqli_fetch_array($b_estudiantes)) {
+                        $b_programa = buscarProgramaEstudio($conexion);
+                        while ($res_b_programa = mysqli_fetch_array($b_programa)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_estudiantes['id']; ?></td>
-                          <td><?php echo $res_b_estudiantes['codigo']; ?></td>
-                          <td><?php echo $res_b_estudiantes['tipo']; ?></td>
-                          <td><?php echo $res_b_estudiantes['nombre']; ?></td>
-                          <td><?php echo $res_b_estudiantes['resolucion']; ?></td>
+                          <td><?php echo $res_b_programa['id']; ?></td>
+                          <td><?php echo $res_b_programa['codigo']; ?></td>
+                          <td><?php echo $res_b_programa['tipo']; ?></td>
+                          <td><?php echo $res_b_programa['nombre']; ?></td>
+                          <td><?php echo $res_b_programa['resolucion']; ?></td>
                           <td>
-                            <a href="editar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_estudiante.php?id=<?php echo $res_b_programa['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_programa['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
