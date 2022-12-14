@@ -64,18 +64,18 @@ include "include/verificar_sesion.php";
                       </thead>
                       <tbody>
                         <?php 
-                        $b_estudiantes = buscarGenero($conexion);
-                        while ($res_b_estudiantes = mysqli_fetch_array($b_estudiantes)) {
+                        $b_modulo = buscarModulo_formativo($conexion);
+                        while ($res_b_modulo = mysqli_fetch_array($b_modulo)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_estudiantes['id']; ?></td>
-                          <td><?php echo $res_b_estudiantes['descripcion']; ?></td>
-                          <td><?php echo $res_b_estudiantes['nro_modulo']; ?></td>
-                          <td><?php echo $res_b_estudiantes['id_programa_estudio']; ?></td>
+                          <td><?php echo $res_b_modulo['id']; ?></td>
+                          <td><?php echo $res_b_modulo['descripcion']; ?></td>
+                          <td><?php echo $res_b_modulo['nro_modulo']; ?></td>
+                          <td><?php echo $res_b_modulo['id_programa_estudio']; ?></td>
                          
                           <td>
-                            <a href="editar_modulo_formativo.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_modulo_formativo.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_modulo_formativo.php?id=<?php echo $res_b_modulo['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_modulo_formativo.php?id=<?php echo $res_b_modulo['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
