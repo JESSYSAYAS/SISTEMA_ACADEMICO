@@ -62,7 +62,7 @@ include "include/verificar_sesion.php";
                       </thead>
                       <tbody>
                         <?php 
-                        $b_periodoacademico = buscarPeriodoAcadById($conexion);
+                        $b_periodoacademico = uscarPresentePeriodoAcad($conexion);
                         while ($res_b_periodoacademico = mysqli_fetch_array($b_periodoacademico)) {
                         ?>
                         <tr>
