@@ -23,7 +23,7 @@
   </head>
 
   <body class="login">
-    <div face="Comic Sans MS,arial,verdana">>
+    <div>
       <a class="hiddenanchor" id="signup"></a>
       <a class="hiddenanchor" id="signin"></a>
 
@@ -34,7 +34,7 @@
             <img src="./img/logo.png" alt="..." class="img-circle profile_img">
             <form method="POST" action="operaciones/iniciar_sesion.php">
             
-              <h1>Inicio de Sesión</h1>
+              <h1><font color="red">Inicio de Sesión</font></h1>
               <div>
                 <input type="text" name="usuario" class="form-control" placeholder="Usuario" required="" />
               </div> 
