@@ -35,7 +35,7 @@
             <img src="./img/logo.png" alt="..." class="img-circle profile_img">
             <form method="POST" action="operaciones/iniciar_sesion.php">
             
-              <h1><font color="purple" >Inicio de Sesión</font></h1>
+              <h1><font color="purple" face="Star Wars">Inicio de Sesión</font></h1>
               <div>
                 <input type="text" name="usuario" class="form-control" placeholder="Usuario" required="" />
               </div> 
