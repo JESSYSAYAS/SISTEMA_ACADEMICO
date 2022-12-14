@@ -8,7 +8,7 @@ $id_programa_estudio= $_POST['id_programa_estudio'];
 $id_semestre= $_POST['id_semestre'];
 $id_programa_estudio= $_POST['cant_calificacion'];
 
-$consulta = "INSERT INTO programacion_unidad_didactica (unidad_didactica,id_docente,id_periodo_acad,id_semestrecant_calificacion) VALUES ('$unidad_didactica','$id_docente','$id_periodo_acad','$id_programa_estudio','$id_semestre','$cant_calificacion')";
+$consulta = "INSERT INTO programacion_unidad_didactica (unidad_didactica,id_docente,id_periodo_acad,id_semestre,cant_calificacion) VALUES ('$unidad_didactica','$id_docente','$id_periodo_acad','$id_programa_estudio','$id_semestre','$cant_calificacion')";
 $ejec_consulta = mysqli_query($conexion, $consulta);
 if($ejec_consulta){
     echo "<script>
