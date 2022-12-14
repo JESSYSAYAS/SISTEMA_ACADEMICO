@@ -43,6 +43,10 @@ include "include/busquedas.php";
             </div>
           </div>
         </div>
+        <img src="./img/esta.jpg" alt="..." class="img-circle profile_img">
+
+
+
         <!-- /page content -->
         <!-- footer content -->
         <footer>
