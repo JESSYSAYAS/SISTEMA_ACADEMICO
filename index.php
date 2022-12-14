@@ -36,12 +36,13 @@ include "include/busquedas.php";
         <?php include "include/menu.php" ?>  
         <!-- Menu en la parte superior -->
         <!-- page content --> 
-         <div>
-        <img src="./img/esta.jpg" alt="..." class="img-circle profile_img">
-        </div>
+         
 
         <div class="right_col" role="main">
           <div class="row">
+            <div>
+        <img src="./img/esta.jpg" alt="..." class="img-circle profile_img">
+        </div>
             <div class="col-md-8 col-sm-8 col-xs-12">
 
             
