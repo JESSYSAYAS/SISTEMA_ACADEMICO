@@ -42,7 +42,7 @@ include "include/verificar_sesion.php";
                 <div class="x_panel">
                   <div class="x_title">
                   <font color="purple" face="Star Wars" >
-                    <h2>Relacion de Estudiantes</h2>
+                    <h2>presente periodo academico</h2>
                     <ul class="nav navbar-right">
                       <li>
                         <a href="periodo_academico" class="btn btn-success">Agregar Nuevo</a>
@@ -62,7 +62,7 @@ include "include/verificar_sesion.php";
                       </thead>
                       <tbody>
                         <?php 
-                        $b_periodoacademico = uscarPresentePeriodoAcad($conexion);
+                        $b_periodoacademico = buscarPresentePeriodoAcad($conexion);
                         while ($res_b_periodoacademico = mysqli_fetch_array($b_periodoacademico)) {
                         ?>
                         <tr>
