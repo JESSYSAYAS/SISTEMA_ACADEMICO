@@ -23,7 +23,7 @@
   </head>
 
   <body class="login">
-    <div class="color: #98ca3f">
+    <div face="Comic Sans MS,arial,verdana">>
       <a class="hiddenanchor" id="signup"></a>
       <a class="hiddenanchor" id="signin"></a>
 
