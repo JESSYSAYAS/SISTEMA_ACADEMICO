@@ -30,12 +30,13 @@
       <div class="login_wrapper">
         
         <div class="animate form login_form">
+          <font color="purple" size="10px">
           <section class="login_content">
           
             <img src="./img/logo.png" alt="..." class="img-circle profile_img">
             <form method="POST" action="operaciones/iniciar_sesion.php">
             
-              <h1><font color="purple" >Inicio de Sesión</font></h1>
+              <h1>Inicio de Sesión</h1>
               <div>
                 <input type="text" name="usuario" class="form-control" placeholder="Usuario" required="" />
               </div> 
@@ -64,6 +65,7 @@
               </div>
             </form>
           </section>
+        </font>
         </div>
       </div>
     </div>
