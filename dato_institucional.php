@@ -45,7 +45,7 @@ include "include/verificar_sesion.php";
                     
                 <div class="clearfix"></div>
                   </div>
-                  <div class="x_content">
+                  <div class="x_content"><font color="blue" face="font-italic">
                     <br />
                     <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_Datos-institucionales.php">
                    
@@ -141,6 +141,7 @@ include "include/verificar_sesion.php";
                       </div>
 
                     </form>
+                    </font>
                   </div>
                 </div>
               </div>
