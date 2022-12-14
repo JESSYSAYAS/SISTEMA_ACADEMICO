@@ -41,7 +41,7 @@ include "include/busquedas.php";
         <div class="right_col" role="main">
           <div class="row">
           <div>
-           <img src="./img/esta.jpg" alt="..." class="img profile_img">
+           <img src="./img/esta.jpg" alt="..." class="img- profile_img">
           </div>
         <div class="col-md-8 col-sm-8 col-xs-12">
 
