@@ -28,13 +28,13 @@
       <a class="hiddenanchor" id="signin"></a>
 
       <div class="login_wrapper">
-
-        <div class="animate form login_form">
-           <!-- menu profile quick info -->
-           <div class="profile clearfix">
+<div class="profile clearfix">
               <div class="profile_pic">
                 <img src="./img/logo.png" alt="..." class="img-circle profile_img">
               </div>
+        <div class="animate form login_form">
+           
+           
           <section class="login_content">
             <form method="POST" action="operaciones/iniciar_sesion.php">
               <h1>Inicio de Sesión</h1>
