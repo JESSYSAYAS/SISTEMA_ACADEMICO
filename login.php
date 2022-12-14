@@ -34,7 +34,7 @@
             <img src="./img/logo.png" alt="..." class="img-circle profile_img">
             <form method="POST" action="operaciones/iniciar_sesion.php">
             
-              <h1><font color="blue" >Inicio de Sesión</font></h1>
+              <h1><font color="blue" face="Comic Sans MS,arial">Inicio de Sesión</font></h1>
               <div>
                 <input type="text" name="usuario" class="form-control" placeholder="Usuario" required="" />
               </div> 
@@ -57,7 +57,7 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i><font color="blue">Sistema Academico</font> </h1>
+                  <h1><i class="fa fa-paw"></i><font color="blue" face="Comic Sans MS,arial">Sistema Academico</font> </h1>
                   <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
                 </div>
               </div>
