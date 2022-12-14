@@ -49,16 +49,16 @@
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">Nuevo en el sitio?
-                  <a href="crear_usuario.php" class="to_register"> Crear Cuenta </a>
+                <p class="change_link" font color="blue" face="Comic Sans MS,arial">Nuevo en el sitio?
+                  <a href="crear_usuario.php" class="to_register" font color="blue" face="Comic Sans MS,arial"> Crear Cuenta </a>
                 </p>
 
                 <div class="clearfix"></div>
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i><font color="blue" face="Comic Sans MS,arial">Sistema Academico</font> </h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <h1><i class="fa fa-paw"></i><font color="blue" face="Comic Sans MS,arial">Sistema Academico</font></h1>
+                  
                 </div>
               </div>
             </form>
