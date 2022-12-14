@@ -31,7 +31,7 @@
         
         <div class="animate form login_form">
           <section class="login_content">
-            <img src="./img/logo.png" alt="..." class="img-circle profile_img">
+            <img src="./img/logo.png" alt="..." class="img profile_img">
             <form method="POST" action="operaciones/iniciar_sesion.php">
             
               <h1>Inicio de Sesión</h1>
