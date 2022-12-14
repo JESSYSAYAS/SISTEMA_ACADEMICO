@@ -41,6 +41,7 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
+                  <font color="purple" face="Star Wars" >
                     <h2>Relacion de Estudiantes</h2>
                     <ul class="nav navbar-right">
                       <li>
@@ -76,7 +77,7 @@ include "include/verificar_sesion.php";
                         <?php
                         }
                         ?>
-                        
+                        </font>
                       </tbody>
                     </table>
                   </div>

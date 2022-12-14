@@ -47,6 +47,7 @@ include "include/verificar_sesion.php";
                   <div class="x_content">
                   <div class="x_content"><font color="purple" face="Star Wars" >
                     <br />
+                    
                     <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_periodo.php">
 
                       <div class="form-group">

@@ -46,6 +46,7 @@ include "include/verificar_sesion.php";
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
+                  <font color="purple" face="Star Wars" >
                     <br />
                     <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_presente_periodo.php">
 
@@ -77,6 +78,7 @@ include "include/verificar_sesion.php";
                       </div>
 
                     </form>
+                    </font>
                   </div>
                 </div>
               </div>
