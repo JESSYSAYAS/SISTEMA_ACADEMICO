@@ -51,7 +51,7 @@ include "include/verificar_sesion.php";
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    
+                  <font color="purple" face="Star Wars" > 
                     <table id="example" class="table table-striped table-bordered">
                       <thead>
                         <tr>
@@ -94,7 +94,7 @@ include "include/verificar_sesion.php";
                         <?php
                         }
                         ?>
-                        
+                        </font>
                       </tbody>
                     </table>
                   </div>
