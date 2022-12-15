@@ -62,16 +62,16 @@ include "include/verificar_sesion.php";
                       </thead>
                       <tbody>
                         <?php 
-                        $b_estudiantes = buscarGenero($conexion);
-                        while ($res_b_estudiantes = mysqli_fetch_array($b_estudiantes)) {
+                        $b_genero = buscarGenero($conexion);
+                        while ($res_b_estudiantes = mysqli_fetch_array($b_genero)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_estudiantes['id']; ?></td>
-                          <td><?php echo $res_b_estudiantes['genero']; ?></td>
+                          <td><?php echo $res_b_genero['id']; ?></td>
+                          <td><?php echo $res_b_genero['genero']; ?></td>
                           
                           <td>
-                            <a href="editar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_genero.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_genero.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php

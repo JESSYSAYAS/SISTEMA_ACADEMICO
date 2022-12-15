@@ -89,8 +89,8 @@ include "include/verificar_sesion.php";
                         <td><?php echo $res_b_unidad['tipo']; ?></td>
                         <td><?php echo $res_b_unidad['orden']; ?></td>
                         <td>
-                          <a href="editar_docente.php?id=<?php echo $res_b_unidad['id']; ?>" class="btn btn-primary">Editar</a>
-                          <a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_unidad['id']; ?>" class="btn btn-danger">Eliminar</a>
+                          <a href="editar_uni_didactica.php?id=<?php echo $res_b_unidad['id']; ?>" class="btn btn-primary">Editar</a>
+                          <a href="operaciones/eliminar_uni_didactica.php?id=<?php echo $res_b_unidad['id']; ?>" class="btn btn-danger">Eliminar</a>
                         </td>
                       </tr>
                     <?php

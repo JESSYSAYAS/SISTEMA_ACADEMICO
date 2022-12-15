@@ -79,8 +79,8 @@ include "include/verificar_sesion.php";
                           <td><?php echo $res_b_unida['cant_calificacion']; ?></td>
                          
                           <td>
-                            <a href="editar_docente.php?id=<?php echo $res_b_unida['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_unida['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_unidad.php?id=<?php echo $res_b_unida['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_unidad.php?id=<?php echo $res_b_unida['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php
