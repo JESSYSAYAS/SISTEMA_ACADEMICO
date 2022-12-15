@@ -47,13 +47,13 @@ include "include/verificar_sesion.php";
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_pro_estud.php">
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_unidad.php">
                    
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">descripcion :
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Descripcion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="varchar" name="descripcion" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="descripcion"  required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
@@ -78,13 +78,13 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">modulo formativo :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="programa_estudio" id="programa_estudio" class="form-control col-md-7 col-xs-12">
+                        <select name="modulo_formativo" id="modulo_formativo" class="form-control col-md-7 col-xs-12">
                           <option value="">Seleccione</option>
                           <?php
                           $buscar_pe = buscarModulo_formativo($conexion);
                           while ($res_b_pe = mysqli_fetch_array($buscar_pe)) {
                           ?>
-                          <option value="<?php echo $res_b_pe['id']; ?>"><?php echo $res_b_pe['nombre']; ?></option>
+                          <option value="<?php echo $res_b_pe['id']; ?>"><?php echo $res_b_pe['descripcion']; ?></option>
                           <?php
                           };
                           ?>
@@ -130,7 +130,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">tipo:
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="varchar" name="tipo" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name="tipo" maxlength="100" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
@@ -146,7 +146,7 @@ include "include/verificar_sesion.php";
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button class="btn btn-primary" type="button">Cancelar</button>
+                          <a class="btn btn-primary" type="submit" href="./uni_didactica.php">Cancelar</a>
 						              <button class="btn btn-primary" type="reset">Limpiar</button>
                           <button type="submit" class="btn btn-success">Guardar</button>
                         </div>

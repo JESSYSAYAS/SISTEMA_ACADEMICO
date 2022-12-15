@@ -55,7 +55,6 @@ include "include/verificar_sesion.php";
                     <table id="example" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Id</th>
                           <th>CODIGO MODULAR</th>
                           <th>RUC</th>
                           <th>NOMBRE INSTITUCION</th>
@@ -71,24 +70,22 @@ include "include/verificar_sesion.php";
                       </thead>
                       <tbody>
                         <?php 
-                        $b_docente = buscardocente($conexion);
-                        while ($res_b_docentes = mysqli_fetch_array($b_docente)) {
+                        $b_datos = buscarDatosInstitucional($conexion);
+                        while ($res_b_datos = mysqli_fetch_array($b_datos)) {
                         ?>
                         <tr>
-                          <td><?php echo $res_b_docentes['codigo_modular']; ?></td>
-                          <td><?php echo $res_b_docentes['ruc']; ?></td>
-                          <td><?php echo $res_b_docentes['nombre_institucion'];  ?></td>
-                          <td><?php echo $res_b_docentes['departamento']; ?></td>
-                          <td><?php echo $res_b_docentes['provincia']; ?></td>
-                          <td><?php echo $res_b_docentes['distrito']; ?></td>
-                          <td><?php echo $res_b_docentes['direccion']; ?></td>
-                          <td><?php echo $res_b_docentes['telofono']; ?></td>
-                          <td><?php echo $res_b_docentes['correo']; ?></td>
-                          <td><?php echo $res_b_docentes['nro_resolucion']; ?></td>
+                          <td><?php echo $res_b_datos['ruc']; ?></td>
+                          <td><?php echo $res_b_datos['nombre_institucion'];  ?></td>
+                          <td><?php echo $res_b_datos['departamento']; ?></td>
+                          <td><?php echo $res_b_datos['provincia']; ?></td>
+                          <td><?php echo $res_b_datos['distrito']; ?></td>
+                          <td><?php echo $res_b_datos['direccion']; ?></td>
+                          <td><?php echo $res_b_datos['telofono']; ?></td>
+                          <td><?php echo $res_b_datos['correo']; ?></td>
+                          <td><?php echo $res_b_datos['nro_resolucion']; ?></td>
 
                           <td>
-                            <a href="editar_dato_institucional.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_dato_institucional.php?id=<?php echo $res_b_docentes['id']; ?>" class="btn btn-danger">Eliminar</a>
+                          <a href="editar_dato_institucional.php?id=<?php echo $res_b_datos['cod_modular']; ?>" class="btn btn-success">Editar</a>
                           </td>
                         </tr>
                         <?php

@@ -15,6 +15,23 @@ function buscarCargo($conexion){
     $sql = "SELECT * FROM programa_estudios";
     return mysqli_query($conexion, $sql);
 }
+function buscarProgramaEstudioById($conexion ,$id){
+    $sql = "SELECT * FROM programa_estudios WHERE id='$id'";
+    return mysqli_query($conexion, $sql);
+}
+function buscarSemestreByID($conexion ,$id){
+    $sql = "SELECT * FROM semestre WHERE id='$id'";
+    return mysqli_query($conexion, $sql);
+}
+function buscarModuloByID($conexion ,$id){
+    $sql = "SELECT * FROM modulo_profesional WHERE id='$id'";
+    return mysqli_query($conexion, $sql);
+}
+
+function buscarPeriodoAcademicoById( $conexion, $id){
+    $sql = "SELECT * FROM periodo_academico WHERE id='$id'";
+    return mysqli_query($conexion, $sql);
+}
 //semestres buscar
 function buscarSemestre($conexion){
     $sql = "SELECT * FROM semestre";
@@ -24,6 +41,16 @@ function buscarCondicion($conexion){
     $sql = "SELECT * FROM condicion";
     return mysqli_query($conexion, $sql);
 }
+function buscarDatosInstitucional($conexion){
+    $sql = "SELECT * FROM datos_institucionales";
+    return mysqli_query($conexion, $sql);
+}
+
+function buscarDInstitiByCodigo($conexion, $codigo){
+    $sql = "SELECT*FROM datos_institucionales WHERE cod_modular = '$codigo'";
+    return mysqli_query($conexion, $sql);
+}
+
 //busqueda de estudiantes
 function buscarEstudianteByDni($conexion, $dni){
     $sql = "SELECT * FROM estudiante WHERE dni='$dni'";
@@ -59,12 +86,19 @@ function buscardocente($conexion){
     $sql = "SELECT * FROM docente";
     return mysqli_query($conexion, $sql);
 }
+function buscarPeriodoAcademico($conexion){
+    $sql = "SELECT * FROM periodo_academico";
+    return mysqli_query($conexion, $sql);
+}
 //busqueda UNIDAD DIDACTICA}
 function buscarUnidadDidactica($conexion){
     $sql = "SELECT * FROM unidad_didactica";
     return mysqli_query($conexion, $sql);
 }
-
+function buscarPre_p_Acad($conexion){
+    $sql = "SELECT * FROM presente_periodo_acad";
+    return mysqli_query($conexion, $sql);
+}
   //busqueda datos institucionales
 
     function buscarDatosInstByCodModular($conexion, $cod_modular){
