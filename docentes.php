@@ -42,7 +42,7 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Relacion de Docentes</h2>
+                    <h2><font color="purple" size="30px" face="Star Wars">Relacion de Docentes</font></h2>
                     <ul class="nav navbar-right">
                       <li>
                         <a href="docente.php" class="btn btn-success">Agregar Nuevo</a>
