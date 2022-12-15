@@ -35,4 +35,4 @@ if ($ejec_consulta) {
 mysqli_close($conexion);
 ?>
 
-?>
+?>g
