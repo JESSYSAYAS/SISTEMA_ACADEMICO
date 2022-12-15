@@ -1,18 +1,22 @@
-
 <?php
 include "include/conexion.php";
 include "include/busquedas.php";
 include "include/verificar_sesion.php";
+
+$d_insti = $_GET['id'];
+$busc_datos = buscarDInstitiByCodigo($conexion, $d_insti);
+$res_b_insti = mysqli_fetch_array($busc_datos);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gentelella Alela! | </title>
+    <title>Editar datos institucionales | </title>
     <!-- Bootstrap -->
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -24,75 +28,64 @@ include "include/verificar_sesion.php";
     <!-- bootstrap-progressbar -->
     <link href="Gentella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
-    <link href="Gentella/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <link href="Gentella/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
     <!-- bootstrap-daterangepicker -->
     <link href="Gentella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="Gentella/build/css/custom.min.css" rel="stylesheet">
-  </head>
-  <body class="nav-md">
+</head>
+
+<body class="nav-md">
     <div class="container body">
-      <div class="main_container">
-        <?php include "include/menu.php" ?>  
-        <!-- Menu en la parte superior -->
-        <!-- page content -->
-        <div class="right_col" role="main">
-        <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2><font color="purple" size="30px" face="Star Wars">Registro de genero</font></h2>
-                    
-                 <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <br /> 
-                    
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_genero.php"><div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Genero: </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="id_genero" id="id_genero" class="form-control col-md-7 col-xs-12">
-                          <option value="">Seleccione</option>
-                          <?php
-                          $buscar_genero = buscarGenero($conexion);
-                          while ($res_b_genero = mysqli_fetch_array($buscar_genero)) {
-                          ?>
-                          <option value="<?php echo $res_b_genero['id']; ?>"><?php echo $res_b_genero['genero']; ?></option>
-                          <?php
-                          };
-                          ?>
-                        </select>
+        <div class="main_container">
+            <?php include "include/menu.php" ?>
+            <!-- Menu en la parte superior -->
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2><font color="purple" size="30px" face="Star Wars">Editar Datos Insitutcionales</font></h2>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <br />
+                                <form class="form-horizontal form-label-left" method="POST" action="operaciones/actualizar_presente_periodo.php">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Código modular :
+                                        </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="number" name="id_periodo_acad" class="form-control col-md-7 col-xs-12" value="<?php echo $b_periodo?>">
+                                        </div>
+                                    </div>
+                                                   
+                                    <div class="ln_solid"></div>
+                                    <div class="form-group">
+                                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                        <a type="button" class="btn btn-primary"  href="./datos_institucionales.php"> Cancelar </a>
+                                            <button type="submit" class="btn btn-success">Guardar</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
                         </div>
-                      </div>
-                    </select>
-                        </div>
-                      </div>
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button class="btn btn-primary" type="button">Cancelar</button>
-						              <button class="btn btn-primary" type="reset">Limpiar</button>
-                          <button type="submit" class="btn btn-success">Guardar</button>
-                        </div>
-                      </div>
-                     </form>
-                  </div>
+                    </div>
                 </div>
-              </div>
             </div>
+            <!-- /page content -->
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
         </div>
-        <!-- /page content -->
-        <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
-      </div>
     </div>
-    
     <!-- jQuery -->
     <script src="Gentella/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -132,6 +125,6 @@ include "include/verificar_sesion.php";
     <script src="Gentella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="Gentella/build/js/custom.min.js"></script>
-  </body>
+</body>
 
 </html>
