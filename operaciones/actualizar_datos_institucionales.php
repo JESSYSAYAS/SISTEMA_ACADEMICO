@@ -2,7 +2,7 @@
     include "../include/conexion.php";
     include "../include/busquedas.php";
 
-    $codigo = $_POST['codigo'];
+    $codigo = $_POST['cod_modular'];
     $ruc= $_POST['ruc'];
     $nombre_institucion= $_POST['nombre_institucion'];
     $departamento= $_POST['departamento'];

@@ -1,6 +1,5 @@
-
-<?php
-include "include/conexion.php";
+<?php 
+include "include/conexion.php"; 
 include "include/busquedas.php";
 include "include/verificar_sesion.php";
 ?>
@@ -21,12 +20,13 @@ include "include/verificar_sesion.php";
     <link href="Gentella/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="Gentella/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- bootstrap-progressbar -->
-    <link href="Gentella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="Gentella/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
-    <!-- bootstrap-daterangepicker -->
-    <link href="Gentella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="Gentella/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="Gentella/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="Gentella/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="Gentella/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="Gentella/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
     <!-- Custom Theme Style -->
     <link href="Gentella/build/css/custom.min.css" rel="stylesheet">
   </head>
@@ -41,99 +41,67 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2><font color="purple" size="30px" face="Star Wars">REGISTRO DATOS INSTITUCIONALES</font></h2>
-                    
+                    <h2><font color="purple" size="30px" face="Star Wars">DATO INSTITUCIONALES</font></h2>
+                    <ul class="nav navbar-right">
+                      <li>
+                        <a href="dato_institucional.php" class="btn btn-success">Agregar Nuevo</a>
+                      </li>
+                    </ul>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_dato_institucional.php">
+                    
+                    <table id="example" class="table table-striped table-bordered">
+                      <thead>
+                        <tr>
+                          
+                          <th>cod_modular</th>
+                          <th>ruc</th>
+                          <th>nombre_institucion</th>
+                          <th>departamento</th>
+                          <th>provincia</th>
+                          <th>distrito</th>
+                          <th>direccion</th>
+                          <th>telofono</th>
+                          <th>correo</th>
+                          <th>nro_resolucion</th>
+                          <th>Acciones</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <?php 
+                        $b_dato = buscarDatosInstitucional($conexion);
+                        while ($res_b_dato = mysqli_fetch_array($b_dato)) {
+                        ?>
+                        <tr>
+                         
+                          <td><?php echo $res_b_dato['cod_modular']; ?></td>
+                          <td><?php echo $res_b_dato['ruc'];  ?></td>
+                          <td><?php echo $res_b_dato['nombre_institucion']; ?></td>
+                          <td><?php echo $res_b_dato['departamento']; ?></td>
+                          <td><?php echo $res_b_dato['provincia']; ?></td>
+                          <td><?php echo $res_b_dato['distrito']; ?></td>
+                          <td><?php echo $res_b_dato['direccion']; ?></td>
+                          <td><?php echo $res_b_dato['telofono']; ?></td>
+                          <td><?php echo $res_b_dato['correo']; ?></td>
+                          <td><?php echo $res_b_dato['nro_resolucion']; ?></td>
 
-                      
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">codigo modular :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="cod_modular" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">ruc :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="ruc" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">nombre institucion :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="nombre_institucion" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">departamento :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="departamento" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">provincia :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="provincia" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">distrito:
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="distrito" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">direccion:
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="direccion" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">telefono:
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="telofono" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">correo:
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="email" name="correo" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">numero resolucion:
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="varchar" name="nro_resolucion" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button class="btn btn-primary" type="button">Cancelar</button>
-						              <button class="btn btn-primary" type="reset">Limpiar</button>
-                          <button type="submit" class="btn btn-success">Guardar</button>
-                        </div>
-                      </div>
 
-                    </form>
+                          <td>
+                            <a href="editar_dato_institucionales.php?id=<?php echo $res_b_dato['cod_modular']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_dato_institucionales.php?id=<?php echo $res_b_dato['cod_modular']; ?>" class="btn btn-danger">Eliminar</a>
+                          </td>
+                        </tr>
+                        <?php
+                        }
+                        ?>
+                        
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
-            </div>
+          </div>
         </div>
         <!-- /page content -->
         <!-- footer content -->
@@ -146,6 +114,7 @@ include "include/verificar_sesion.php";
         <!-- /footer content -->
       </div>
     </div>
+    
     <!-- jQuery -->
     <script src="Gentella/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -154,37 +123,52 @@ include "include/verificar_sesion.php";
     <script src="Gentella/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="Gentella/vendors/nprogress/nprogress.js"></script>
-    <!-- Chart.js -->
-    <script src="Gentella/vendors/Chart.js/dist/Chart.min.js"></script>
-    <!-- gauge.js -->
-    <script src="Gentella/vendors/gauge.js/dist/gauge.min.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="Gentella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- iCheck -->
     <script src="Gentella/vendors/iCheck/icheck.min.js"></script>
-    <!-- Skycons -->
-    <script src="Gentella/vendors/skycons/skycons.js"></script>
-    <!-- Flot -->
-    <script src="Gentella/vendors/Flot/jquery.flot.js"></script>
-    <script src="Gentella/vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="Gentella/vendors/Flot/jquery.flot.time.js"></script>
-    <script src="Gentella/vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="Gentella/vendors/Flot/jquery.flot.resize.js"></script>
-    <!-- Flot plugins -->
-    <script src="Gentella/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="Gentella/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="Gentella/vendors/flot.curvedlines/curvedLines.js"></script>
-    <!-- DateJS -->
-    <script src="Gentella/vendors/DateJS/build/date.js"></script>
-    <!-- JQVMap -->
-    <script src="Gentella/vendors/jqvmap/dist/jquery.vmap.js"></script>
-    <script src="Gentella/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="Gentella/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="Gentella/vendors/moment/min/moment.min.js"></script>
-    <script src="Gentella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- Datatables -->
+    <script src="Gentella/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="Gentella/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="Gentella/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="Gentella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="Gentella/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="Gentella/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="Gentella/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="Gentella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="Gentella/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="Gentella/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="Gentella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="Gentella/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="Gentella/vendors/jszip/dist/jszip.min.js"></script>
+    <script src="Gentella/vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="Gentella/vendors/pdfmake/build/vfs_fonts.js"></script>
+
     <!-- Custom Theme Scripts -->
     <script src="Gentella/build/js/custom.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    $('#example').DataTable({
+      "language":{
+    "processing": "Procesando...",
+    "lengthMenu": "Mostrar _MENU_ registros",
+    "zeroRecords": "No se encontraron resultados",
+    "emptyTable": "Ningún dato disponible en esta tabla",
+    "sInfo": "Mostrando del _START_ al _END_ de un total de _TOTAL_ registros",
+    "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+    "search": "Buscar:",
+    "infoThousands": ",",
+    "loadingRecords": "Cargando...",
+    "paginate": {
+        "first": "Primero",
+        "last": "Último",
+        "next": "Siguiente",
+        "previous": "Anterior"
+    },
+      }
+    });
+
+    } );
+    </script>
   </body>
 
 </html>

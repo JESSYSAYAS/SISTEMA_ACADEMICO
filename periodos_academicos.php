@@ -1,4 +1,3 @@
-
 <?php
 include "include/conexion.php";
 include "include/busquedas.php";
@@ -41,46 +40,44 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2><font color="purple" size="30px" face="Star Wars">Registro de modulos profesionales</font></h2>
-                 
+                    <h2><font color="purple" size="30px" face="Star Wars">PERIODO ACADEMICO</font></h2>
+                    
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
+                  <div class="x_content"><font color="purple" face="Star Wars" >
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_modulo.php">
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">descripcion:
-                        </label>
+                    
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_periodo.php">
+
+                      
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha inicio : </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="varchar" name="descripcion" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                     
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">numero modulo:
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="varchar" name="nro_modulo" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="date" name="fecha_inicio" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Programa de Estudios :
-                        </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha fin : </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="id_programa_estudios" id="id_programa_estudios" class="form-control col-md-7 col-xs-12">
-                          <option value="">Seleccione</option>
-                          <?php
-                          $buscar_pe = buscarProgramaEstudio($conexion);
-                          while ($res_b_pe = mysqli_fetch_array($buscar_pe)) {
-                          ?>
-                          <option value="<?php echo $res_b_pe['id']; ?>"><?php echo $res_b_pe['nombre']; ?></option>
-                          <?php
-                          };
-                          ?>
-                        </select>
+                          <input type="date" name="fecha_fin" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
-                       <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Director :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="director" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha Actas : </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="date" name="fecha_actas" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      
+                      <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                           <button class="btn btn-primary" type="button">Cancelar</button>
@@ -88,7 +85,9 @@ include "include/verificar_sesion.php";
                           <button type="submit" class="btn btn-success">Guardar</button>
                         </div>
                       </div>
-                     </form>
+
+                    </form>
+                    </font>
                   </div>
                 </div>
               </div>
@@ -145,5 +144,4 @@ include "include/verificar_sesion.php";
     <!-- Custom Theme Scripts -->
     <script src="Gentella/build/js/custom.min.js"></script>
   </body>
-
 </html>

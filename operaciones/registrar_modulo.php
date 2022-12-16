@@ -1,26 +1,23 @@
-
 <?php
-include "../include/conexion.php"; //incluir el archivo de la conexion
-include "../include/busquedas.php";
+include "../include/conexion.php";
 
-$descripcion = $_POST['descripcion']; //recibir datos y guardando en una variable $genero
+$descripcion = $_POST['descripcion'];
 $nro_modulo = $_POST['nro_modulo'];
-$id_programa_estudio = $_POST['id_programa_estudio'];
+$programa_estudios = $_POST['id_programa_estudios'];
 
 
-$consulta = "INSERT INTO modulo_profesional  (descripcion,nro_modular,id_programa_estudio) VALUES ('$descripcion','$nro_modulo','$id_programa_estudio')";
-$ejec_consulta = mysqli_query($conexion, $consulta);
-if($ejec_consulta){
+$sql = "INSERT INTO modulo_profesional (descripcion, nro_modulo, id_programa_estudio) VALUES('$descripcion', '$nro_modulo', '$programa_estudios')";
+$ejec_sql = mysqli_query($conexion, $sql);
+
+if ($ejec_sql) {
     echo "<script>
-        alert('Registro Satisfactorio');
-        window.location = '../modulo_formativo.php';
-    </script>";
-}else{
+                alert('Registro Exitoso');
+                window.location= '../modulo_formativo.php'
+    			</script>";
+} else {
     echo "<script>
-        alert('Error al registrar usuario');
-        window.history.back();
-    </script>";
+			alert('El estudiante ya existe, error al guardar');
+			window.history.back();
+			</script>
+			";
 }
-
-
-?>

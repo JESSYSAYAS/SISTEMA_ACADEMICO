@@ -71,11 +71,7 @@ include "include/verificar_sesion.php";
                           <td><?php echo $res_b_modulo['id']; ?></td>
                           <td><?php echo $res_b_modulo['descripcion']; ?></td>
                           <td><?php echo $res_b_modulo['nro_modulo']; ?></td>
-                          <td><?php 
-                           $b_programa = buscarProgramaEstudioById($conexion, $res_b_modulo['id_programa_estudio']);
-                           $res_b_programa_id = mysqli_fetch_array($b_programa);
-                          echo $res_b_programa_id['nombre']; ?></td>
-                         
+                          <td><?php echo $res_b_modulo['id_programa_estudio']; ?></td>
                           <td>
                             <a href="editar_modulo_formativo.php?id=<?php echo $res_b_modulo['id']; ?>" class="btn btn-primary">Editar</a>
                             <a href="operaciones/eliminar_modulo_formativo.php?id=<?php echo $res_b_modulo['id']; ?>" class="btn btn-danger">Eliminar</a>

@@ -80,14 +80,14 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Correo :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="email" name="email" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="email" name="correo" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">NRO Celular :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="number" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="number" name="telefono" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
@@ -112,7 +112,7 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nivel Educacion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="nivel_educacion" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="varchar" name="nivel_educacion" maxlength="9" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                      
@@ -120,13 +120,30 @@ include "include/verificar_sesion.php";
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Condición :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="condicion" id="condicion" class="form-control col-md-7 col-xs-12">
+                        <select name="condicion_laboral" id="condicion_laboral" class="form-control col-md-7 col-xs-12">
                           <option value="">Seleccione</option>
                           <?php
-                          $buscar_condicion = buscarCondicion($conexion);
-                          while ($res_b_condicion = mysqli_fetch_array($buscar_condicion)) {
+                        $b_condicion = buscarCondicion($conexion);
+                          while ($res_b_condicion = mysqli_fetch_array($b_condicion)) {
                           ?>
-                          <option value="<?php echo $res_b_condicion['id']; ?>"><?php echo $res_b_condicion['descripcion']; ?></option>
+                          <option value="<?php echo $res_b_condicion['id']; ?>"><?php echo $res_b_condicion['codigo']; ?></option>
+                          <?php
+                          };
+                          ?>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Cargo :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <select name="id_cargo" id="id_cargo" class="form-control col-md-7 col-xs-12">
+                          <option value="">Seleccione</option>
+                          <?php
+                          $b_cargo = buscarCargo($conexion);
+                          while ($res_b_cargo = mysqli_fetch_array($b_cargo)) {
+                          ?>
+                          <option value="<?php echo $res_b_cargo['id']; ?>"><?php echo $res_b_cargo['descripcion']; ?></option>
                           <?php
                           };
                           ?>

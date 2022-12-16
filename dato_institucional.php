@@ -41,46 +41,86 @@ include "include/verificar_sesion.php";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2><font color="purple" size="30px" face="Star Wars">Registro de modulos profesionales</font></h2>
-                 
+                    <h2><font color="purple" size="30px" face="Star Wars">REGISTRO DATOS INSTITUCIONALES</font></h2>
+                    
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_modulo.php">
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">descripcion:
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_dato_institucional.php">
+
+                      
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">codigo modular :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="varchar" name="descripcion" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="number" name="cod_modular" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
-                      </div>
-                     
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">numero modulo:
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">ruc :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="varchar" name="nro_modulo" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="number" name="ruc" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Programa de Estudios :
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">nombre institucion :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="id_programa_estudios" id="id_programa_estudios" class="form-control col-md-7 col-xs-12">
-                          <option value="">Seleccione</option>
-                          <?php
-                          $buscar_pe = buscarProgramaEstudio($conexion);
-                          while ($res_b_pe = mysqli_fetch_array($buscar_pe)) {
-                          ?>
-                          <option value="<?php echo $res_b_pe['id']; ?>"><?php echo $res_b_pe['nombre']; ?></option>
-                          <?php
-                          };
-                          ?>
-                        </select>
+                          <input type="text" name="nombre_institucion" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
-                      </div>
-                       <div class="ln_solid"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">departamento :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="departamento" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">provincia :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="provincia" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">distrito:
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="distrito" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">direccion:
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="direccion" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">telefono:
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="telofono" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">correo:
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="email" name="correo" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">numero resolucion:
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="varchar" name="nro_resolucion" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+                      <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                           <button class="btn btn-primary" type="button">Cancelar</button>
@@ -88,7 +128,8 @@ include "include/verificar_sesion.php";
                           <button type="submit" class="btn btn-success">Guardar</button>
                         </div>
                       </div>
-                     </form>
+
+                    </form>
                   </div>
                 </div>
               </div>

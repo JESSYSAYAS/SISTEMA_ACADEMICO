@@ -15,7 +15,7 @@ function buscarCargo($conexion){
     $sql = "SELECT * FROM programa_estudios";
     return mysqli_query($conexion, $sql);
 }
-function buscarProgramaEstudioById($conexion ,$id){
+function buscarProgramaEstudioById($conexion,$id){
     $sql = "SELECT * FROM programa_estudios WHERE id='$id'";
     return mysqli_query($conexion, $sql);
 }
@@ -37,10 +37,17 @@ function buscarSemestre($conexion){
     $sql = "SELECT * FROM semestre";
     return mysqli_query($conexion, $sql);
 }
+//condicion buscar
 function buscarCondicion($conexion){
     $sql = "SELECT * FROM condicion";
     return mysqli_query($conexion, $sql);
+    
 }
+function buscarCondicionById( $conexion, $id){
+    $sql = "SELECT * FROM condicion  WHERE id='$id'";
+    return mysqli_query($conexion, $sql);
+}
+//buscar datos institucinales
 function buscarDatosInstitucional($conexion){
     $sql = "SELECT * FROM datos_institucionales";
     return mysqli_query($conexion, $sql);
@@ -51,6 +58,10 @@ function buscarDInstitiByCodigo($conexion, $codigo){
     return mysqli_query($conexion, $sql);
 }
 
+function buscarDatoById( $conexion, $id){
+    $sql = "SELECT * FROM  datos_institucionales WHERE id='$id'";
+    return mysqli_query($conexion, $sql);
+}
 //busqueda de estudiantes
 function buscarEstudianteByDni($conexion, $dni){
     $sql = "SELECT * FROM estudiante WHERE dni='$dni'";
@@ -95,6 +106,11 @@ function buscarUnidadDidactica($conexion){
     $sql = "SELECT * FROM unidad_didactica";
     return mysqli_query($conexion, $sql);
 }
+
+function buscarUnidadDidacticaById($conexion, $id){
+    $sql = "SELECT * FROM usuarios_docentes WHERE id=$id";
+    return mysqli_query($conexion, $sql);
+}
 function buscarPre_p_Acad($conexion){
     $sql = "SELECT * FROM presente_periodo_acad";
     return mysqli_query($conexion, $sql);
@@ -117,7 +133,7 @@ function buscarPeriodoAcadById($conexion){
 }
 //busqueda presente periodo academico
 function buscarPresentePeriodoAcad($conexion){
-    $sql = "SELECT * FROM periodo_academico";
+    $sql = "SELECT * FROM presente_periodo_acad";
     return mysqli_query($conexion, $sql);
 }
 //busqueda modulo formartivo

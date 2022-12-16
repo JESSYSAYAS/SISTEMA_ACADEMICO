@@ -4,7 +4,7 @@ include "../include/busquedas.php";
 $descripcion = $_POST['descripcion']; //recibir datos y guardando en una variable $usuario
 $codigo = $_POST['codigo']; //recibir datos y guardando en una variable $docente
 
-$consulta = "INSERT INTO cargo ( descripcion,codigo) VALUES ( '$descripcion','$codigo')";
+$consulta = "INSERT INTO condicion(descripcion,codigo) VALUES ('$descripcion','$codigo')";
 $ejec_consulta = mysqli_query($conexion, $consulta);
 if($ejec_consulta){
     echo "<script>

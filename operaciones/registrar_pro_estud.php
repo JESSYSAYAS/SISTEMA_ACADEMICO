@@ -1,6 +1,7 @@
 <?php
 include "../include/conexion.php";
 include "../include/busquedas.php";
+
 $codigo = $_POST['codigo'];
 $tipo = $_POST['tipo'];
 $nombre = $_POST['nombre'];

@@ -3,87 +3,55 @@ include "include/conexion.php";
 include "include/busquedas.php";
 include "include/verificar_sesion.php";
 
-$d_insti = $_GET['id'];
-$busc_datos = buscarDInstitiByCodigo($conexion, $d_insti);
-$res_b_insti = mysqli_fetch_array($busc_datos);
+$id_cargo = $_GET['id'];
+$busc_cargo = buscarCargoById($conexion, $id_cargo);
+$res_b_cargo= mysqli_fetch_array($busc_cargo);
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Editar datos institucionales | </title>
-    <!-- Bootstrap -->
-    <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="Gentella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="Gentella/vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="Gentella/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- bootstrap-progressbar -->
-    <link href="Gentella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="Gentella/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
-    <!-- bootstrap-daterangepicker -->
-    <link href="Gentella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-    <!-- Custom Theme Style -->
-    <link href="Gentella/build/css/custom.min.css" rel="stylesheet">
-</head>
-
-<body class="nav-md">
-    <div class="container body">
-        <div class="main_container">
-            <?php include "include/menu.php" ?>
-            <!-- Menu en la parte superior -->
-            <!-- page content -->
-            <div class="right_col" role="main">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="x_panel">
-                            <div class="x_title">
-                                <h2><font color="purple" size="30px" face="Star Wars">Editar cargo</font></h2>
-
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="x_content">
-                                <br />
-                                <form class="form-horizontal form-label-left" method="POST" action="operaciones/actualizar_cargo.php">
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">descripcion :
-                                        </label>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input type="number" name="codigo" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_cargo?>">
-                                        </div>
-                                                           
-                                    <div class="ln_solid"></div>
-                                    <div class="form-group">
-                                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                        <a type="button" class="btn btn-primary"  href="./datos_institucionales.php"> Cancelar </a>
-                                            <button type="submit" class="btn btn-success">Guardar</button>
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
+ <!-- page content -->
+        <div class="right_col" role="main">
+        <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Editar datos institucinales</h2>
+                    
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/actualizar_cargo.php">
+                        <input type="hidden" name="id" value="<?php echo $id_cargo;?>">
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Descripcion :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="descripcion" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_cargo['descripcion']; ?>">
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /page content -->
-            <!-- footer content -->
-            <footer>
-                <div class="pull-right">
-                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-                </div>
-                <div class="clearfix"></div>
-            </footer>
-            <!-- /footer content -->
-        </div>
+                      </div>
+                      <div class="ln_solid"></div>
+									<div class="form-group">
+										<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+											<a href="./datos_institucionales.php" class="btn btn-primary" type="button">Cancelar</a>
+											<button type="submit" class="btn btn-success">Actualizar Datos</button>
+										</div>
+									</div>
+
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        <!-- /page content -->
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
     </div>
     <!-- jQuery -->
     <script src="Gentella/vendors/jquery/dist/jquery.min.js"></script>
@@ -124,6 +92,6 @@ $res_b_insti = mysqli_fetch_array($busc_datos);
     <script src="Gentella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="Gentella/build/js/custom.min.js"></script>
-</body>
+  </body>
 
 </html>

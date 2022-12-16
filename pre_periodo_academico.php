@@ -60,7 +60,7 @@ include "include/verificar_sesion.php";
                           $buscar_pe = buscarPeriodoAcadById($conexion);
                           while ($res_b_pe = mysqli_fetch_array($buscar_pe)) {
                           ?>
-                          <option value="<?php echo $res_b_pe['id']; ?>"><?php echo $res_b_pe['fecha_inicio']; ?></option>
+                          <option value="<?php echo $res_b_pe['id']; ?>"><?php echo $res_b_pe['fecha_fin']; ?></option>
                           <?php
                           };
                           ?>

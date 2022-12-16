@@ -57,9 +57,17 @@ include "include/verificar_sesion.php";
                           <th>Id</th>
                           <th>DNI</th>
                           <th>APELLIDOS Y NOMBRES</th>
+                          <th>GENERO</th>
+                          <th>FECHA DE NACIMIENTO</th>
                           <th>DIRECCION</th>
-                          <th>CARRERA</th>
+                          <th>CORREO</th>
+                          <th>AÑO INGRESO</th>
+                          <th>PROGRAMA ESTUDIOS</th>
                           <th>SEMESTRE</th>
+                          <th>SECCION</th>
+                          <th>TURNO</th>
+                          <th>CONDICION</th>
+                          <th>DISCAPACIDAD</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
@@ -72,9 +80,18 @@ include "include/verificar_sesion.php";
                           <td><?php echo $res_b_estudiantes['id']; ?></td>
                           <td><?php echo $res_b_estudiantes['dni']; ?></td>
                           <td><?php echo $res_b_estudiantes['apellidos_nombres'];  ?></td>
+                          <td><?php echo $res_b_estudiantes['id_genero']; ?></td>
+                          <td><?php echo $res_b_estudiantes['fecha_nac']; ?></td>
                           <td><?php echo $res_b_estudiantes['direccion']; ?></td>
+                          <td><?php echo $res_b_estudiantes['correo']; ?></td>
+                          <td><?php echo $res_b_estudiantes['telefono']; ?></td>
+                          <td><?php echo $res_b_estudiantes['anio_ingreso']; ?></td>
                           <td><?php echo $res_b_estudiantes['id_programa_estudios']; ?></td>
                           <td><?php echo $res_b_estudiantes['id_semestre']; ?></td>
+                          <td><?php echo $res_b_estudiantes['seccion']; ?></td>
+                          <td><?php echo $res_b_estudiantes['turno']; ?></td>
+                          <td><?php echo $res_b_estudiantes['id_condicion']; ?></td>
+                          <td><?php echo $res_b_estudiantes['discapacidad']; ?></td>
                           <td>
                             <a href="editar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-primary">Editar</a>
                             <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-danger">Eliminar</a>

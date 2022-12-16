@@ -55,12 +55,17 @@ include "include/verificar_sesion.php";
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">codigo:
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">codigo :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" name="codigo" required="required" class="form-control col-md-7 col-xs-12">
+                          <select name="codigo" id="codigo" class="form-control col-md-7 col-xs-12">
+                            <option value="">Seleccione</option>
+                            <option value="R">R</option>
+                            <option value="I">I</option>
+                          </select>
                         </div>
                       </div>
+                      
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
